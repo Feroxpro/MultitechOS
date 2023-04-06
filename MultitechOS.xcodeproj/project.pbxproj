@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
+		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
+		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
+		1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F829DE7B170073A386 /* OrdersViewController.swift */; };
+		1B91F3FB29DE7B260073A386 /* FinishedOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3FA29DE7B260073A386 /* FinishedOrdersViewController.swift */; };
+		1B91F3FD29DE7B3C0073A386 /* WarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3FC29DE7B3C0073A386 /* WarrantyViewController.swift */; };
+		1B91F3FF29DE7B470073A386 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3FE29DE7B470073A386 /* OSViewController.swift */; };
+		1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40029DE7B580073A386 /* ServicesViewController.swift */; };
+		1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40229DE7B670073A386 /* ClientsViewController.swift */; };
 		1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96C98529DD19BD001E84B5 /* collectionModel.swift */; };
 		1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC229DA781400C35684 /* AppDelegate.swift */; };
 		1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC429DA781400C35684 /* SceneDelegate.swift */; };
@@ -26,6 +34,14 @@
 
 /* Begin PBXFileReference section */
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
+		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1B91F3F829DE7B170073A386 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		1B91F3FA29DE7B260073A386 /* FinishedOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedOrdersViewController.swift; sourceTree = "<group>"; };
+		1B91F3FC29DE7B3C0073A386 /* WarrantyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyViewController.swift; sourceTree = "<group>"; };
+		1B91F3FE29DE7B470073A386 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
+		1B91F40029DE7B580073A386 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		1B91F40229DE7B670073A386 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 		1B96C98529DD19BD001E84B5 /* collectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionModel.swift; sourceTree = "<group>"; };
 		1BB30FBF29DA781400C35684 /* MultitechOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultitechOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB30FC229DA781400C35684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +88,70 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1B91F3E429DE75CC0073A386 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B91F3EE29DE7A5B0073A386 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F40229DE7B670073A386 /* ClientsViewController.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		1B91F3EF29DE7A710073A386 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F40029DE7B580073A386 /* ServicesViewController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1B91F3F029DE7A780073A386 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3FE29DE7B470073A386 /* OSViewController.swift */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		1B91F3F229DE7AA80073A386 /* Warranty */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3FC29DE7B3C0073A386 /* WarrantyViewController.swift */,
+			);
+			path = Warranty;
+			sourceTree = "<group>";
+		};
+		1B91F3F329DE7ABF0073A386 /* FinishedOrders */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3FA29DE7B260073A386 /* FinishedOrdersViewController.swift */,
+			);
+			path = FinishedOrders;
+			sourceTree = "<group>";
+		};
+		1B91F3F429DE7ADB0073A386 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3F829DE7B170073A386 /* OrdersViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		1B91F3F529DE7AE20073A386 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3F629DE7B030073A386 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		1B96C98429DD19AC001E84B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +179,16 @@
 		1BB30FC129DA781400C35684 /* MultitechOS */ = {
 			isa = PBXGroup;
 			children = (
-				1BB30FE729DA7D9800C35684 /* Bases */,
-				1BB30FDE29DA7BDB00C35684 /* Delegate */,
 				1BB30FDF29DA7BED00C35684 /* Resources */,
+				1BB30FDE29DA7BDB00C35684 /* Delegate */,
+				1BB30FE729DA7D9800C35684 /* Bases */,
+				1B91F3F529DE7AE20073A386 /* Settings */,
+				1B91F3F429DE7ADB0073A386 /* Orders */,
+				1B91F3F329DE7ABF0073A386 /* FinishedOrders */,
+				1B91F3F229DE7AA80073A386 /* Warranty */,
+				1B91F3F029DE7A780073A386 /* OS */,
+				1B91F3EF29DE7A710073A386 /* Services */,
+				1B91F3EE29DE7A5B0073A386 /* Clients */,
 				1BB30FEE29DA87A600C35684 /* Home */,
 				1BB30FD929DA7B6F00C35684 /* SignIn */,
 				1BB30FD329DA781700C35684 /* Info.plist */,
@@ -174,8 +261,9 @@
 		1BB30FEE29DA87A600C35684 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1B91F3E029DE71F40073A386 /* View */,
+				1B91F3E429DE75CC0073A386 /* ViewModel */,
 				1B96C98429DD19AC001E84B5 /* Model */,
+				1B91F3E029DE71F40073A386 /* View */,
 				1BB30FEF29DA87BD00C35684 /* Controller */,
 			);
 			path = Home;
@@ -267,12 +355,20 @@
 			files = (
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
+				1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */,
+				1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */,
+				1B91F3FF29DE7B470073A386 /* OSViewController.swift in Sources */,
 				1BB30FE129DA7C1B00C35684 /* SignInViewScreen.swift in Sources */,
 				1BB30FCD29DA781400C35684 /* MultitechOS.xcdatamodeld in Sources */,
 				1BB30FED29DA852100C35684 /* SignInViewModel.swift in Sources */,
 				1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */,
+				1B91F3FD29DE7B3C0073A386 /* WarrantyViewController.swift in Sources */,
 				1BB30FF429DA881700C35684 /* HomeViewController.swift in Sources */,
 				1BB30FF929DB5FAC00C35684 /* HomeCollectionViewCell.swift in Sources */,
+				1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */,
+				1B91F3FB29DE7B260073A386 /* FinishedOrdersViewController.swift in Sources */,
+				1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */,
+				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
 				1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */,
