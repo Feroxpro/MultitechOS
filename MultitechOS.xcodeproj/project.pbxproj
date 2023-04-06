@@ -12,6 +12,8 @@
 		1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BD29DF48860001849C /* BaseTableViewCell.swift */; };
 		1B1830C029DF73170001849C /* ServicesViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BF29DF73170001849C /* ServicesViewScreen.swift */; };
 		1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */; };
+		1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */; };
+		1B1830CE29DF7C170001849C /* OrdersViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
 		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
 		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
@@ -43,6 +45,8 @@
 		1B1830BD29DF48860001849C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		1B1830BF29DF73170001849C /* ServicesViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewScreen.swift; sourceTree = "<group>"; };
 		1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,45 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		1B1830C629DF7BC10001849C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F3F829DE7B170073A386 /* OrdersViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B1830C729DF7BC30001849C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B1830C829DF7BC60001849C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B1830CA29DF7BEA0001849C /* Cell */,
+				1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B1830C929DF7BCA0001849C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B1830CA29DF7BEA0001849C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1B91F3E029DE71F40073A386 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +260,10 @@
 		1B91F3F429DE7ADB0073A386 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
-				1B91F3F829DE7B170073A386 /* OrdersViewController.swift */,
+				1B1830C929DF7BCA0001849C /* Model */,
+				1B1830C829DF7BC60001849C /* View */,
+				1B1830C729DF7BC30001849C /* ViewModel */,
+				1B1830C629DF7BC10001849C /* Controller */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -434,6 +480,7 @@
 			files = (
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
+				1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */,
 				1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */,
 				1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */,
 				1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */,
@@ -453,6 +500,7 @@
 				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
 				1B1830C029DF73170001849C /* ServicesViewScreen.swift in Sources */,
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
+				1B1830CE29DF7C170001849C /* OrdersViewScreen.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
 				1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */,
 				1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */,

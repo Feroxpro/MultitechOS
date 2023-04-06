@@ -30,22 +30,18 @@ class HomeViewModel {
             self.homeViewController?.navigationController?.pushViewController(serviceViewController, animated: true)
             return
         case 2:
-            let osViewController = OSViewController()
-            self.homeViewController?.navigationController?.pushViewController(osViewController, animated: true)
-            return
-        case 3:
             let ordersViewController = OrdersViewController()
             self.homeViewController?.navigationController?.pushViewController(ordersViewController, animated: true)
             return
-        case 4:
+        case 3:
             let warrantyViewController = WarrantyViewController()
             self.homeViewController?.navigationController?.pushViewController(warrantyViewController, animated: true)
             return
-        case 5:
+        case 4:
             let finishedOrdersViewController = FinishedOrdersViewController()
             self.homeViewController?.navigationController?.pushViewController(finishedOrdersViewController, animated: true)
             return
-        case 6:
+        case 5:
             let settingsViewController = SettingsViewController()
             self.homeViewController?.navigationController?.pushViewController(settingsViewController, animated: true)
             return

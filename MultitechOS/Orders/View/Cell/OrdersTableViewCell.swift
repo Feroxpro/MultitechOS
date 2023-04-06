@@ -1,5 +1,5 @@
 //
-//  ClientsTableViewCell.swift
+//  OrdersTableViewCell.swift
 //  MultitechOS
 //
 //  Created by Felipe Domingos on 06/04/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ClientsTableViewCell: BaseTableViewCell {
+class OrdersTableViewCell: BaseTableViewCell {
     
     lazy var containerView: UIView = {
         let view = UIView()
@@ -17,7 +17,7 @@ class ClientsTableViewCell: BaseTableViewCell {
     
     lazy var OsNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "ID: 10"
+        label.text = "OS: 1000"
         label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = .white
         return label
@@ -37,13 +37,20 @@ class ClientsTableViewCell: BaseTableViewCell {
         return label
     }()
     
-    lazy var phoneNumber: UILabel = {
+    lazy var entryData: UILabel = {
         let label = UILabel()
-        label.text = "(11)98979-5250"
+        label.text = "06/04/2023"
         label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
+    lazy var deviceImage: UIImageView = {
+        let img = UIImageView()
+        img.image = UIImage(systemName: "iphone")
+        img.tintColor = .white
+        return img
+    }()
     
     
     override func addSubviews() {
@@ -51,7 +58,8 @@ class ClientsTableViewCell: BaseTableViewCell {
         containerView.addSubview(OsNumberLabel)
         containerView.addSubview(clientName)
         containerView.addSubview(cpf)
-        containerView.addSubview(phoneNumber)
+        containerView.addSubview(entryData)
+        containerView.addSubview(deviceImage)
     }
     
     override func configureConstraints() {
@@ -75,10 +83,17 @@ class ClientsTableViewCell: BaseTableViewCell {
             make.leading.equalTo(OsNumberLabel.snp.trailing).offset(15)
         }
         
-        phoneNumber.snp.makeConstraints { make in
-            make.top.equalTo(clientName.snp.bottom).offset(20)
+        entryData.snp.makeConstraints { make in
+            make.top.equalTo(containerView.snp.top).offset(10)
             make.trailing.equalTo(containerView.snp.trailing).inset(10)
+        }
+        deviceImage.snp.makeConstraints { make in
+            make.bottom.equalTo(containerView.snp.bottom).inset(15)
+            make.centerX.equalTo(entryData.snp.centerX)
+            make.width.equalTo(25)
+            make.height.equalTo(30)
         }
         
     }
 }
+
