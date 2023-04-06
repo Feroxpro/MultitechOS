@@ -10,13 +10,6 @@ import SnapKit
 
 class HomeCollectionViewCell: BaseViewCell {
     
-    var items: Item? {
-        didSet {
-            nameLabel.text = items?.name
-            profileImage.image = items?.image
-        }
-    }
-    
     lazy var serviceView: UIView = {
         let img = UIView()
         img.layer.cornerRadius = 10

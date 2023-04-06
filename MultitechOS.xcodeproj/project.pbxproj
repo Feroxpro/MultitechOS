@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96C98529DD19BD001E84B5 /* collectionModel.swift */; };
 		1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC229DA781400C35684 /* AppDelegate.swift */; };
 		1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC429DA781400C35684 /* SceneDelegate.swift */; };
 		1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC629DA781400C35684 /* SignInViewController.swift */; };
@@ -21,10 +22,10 @@
 		1BB30FF429DA881700C35684 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FF329DA881700C35684 /* HomeViewController.swift */; };
 		1BB30FF629DA973700C35684 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FF529DA973700C35684 /* HomeViewScreen.swift */; };
 		1BB30FF929DB5FAC00C35684 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FF829DB5FAC00C35684 /* HomeCollectionViewCell.swift */; };
-		1BB30FFB29DB682500C35684 /* collectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FFA29DB682500C35684 /* collectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B96C98529DD19BD001E84B5 /* collectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionModel.swift; sourceTree = "<group>"; };
 		1BB30FBF29DA781400C35684 /* MultitechOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultitechOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB30FC229DA781400C35684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB30FC429DA781400C35684 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		1BB30FF329DA881700C35684 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1BB30FF529DA973700C35684 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewScreen.swift; path = ../../../../../../HomeViewScreen.swift; sourceTree = "<group>"; };
 		1BB30FF829DB5FAC00C35684 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		1BB30FFA29DB682500C35684 /* collectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = collectionViewModel.swift; path = ../../../../../../../../../../Downloads/collectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B96C98429DD19AC001E84B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B96C98529DD19BD001E84B5 /* collectionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1BB30FB629DA781400C35684 = {
 			isa = PBXGroup;
 			children = (
@@ -91,16 +99,8 @@
 				1BB30FDD29DA7BB800C35684 /* View */,
 				1BB30FDC29DA7BB600C35684 /* ViewModel */,
 				1BB30FDB29DA7BB200C35684 /* Controller */,
-				1BB30FDA29DA7B8B00C35684 /* Model */,
 			);
 			path = SignIn;
-			sourceTree = "<group>";
-		};
-		1BB30FDA29DA7B8B00C35684 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1BB30FDB29DA7BB200C35684 /* Controller */ = {
@@ -157,9 +157,8 @@
 		1BB30FEE29DA87A600C35684 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1BB30FF229DA87BF00C35684 /* Model */,
+				1B96C98429DD19AC001E84B5 /* Model */,
 				1BB30FF129DA87BF00C35684 /* View */,
-				1BB30FF029DA87BE00C35684 /* ViewModel */,
 				1BB30FEF29DA87BD00C35684 /* Controller */,
 			);
 			path = Home;
@@ -173,14 +172,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		1BB30FF029DA87BE00C35684 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewModel;
-			path = "New Group/ViewModel";
-			sourceTree = "<group>";
-		};
 		1BB30FF129DA87BF00C35684 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,15 +180,6 @@
 			);
 			name = View;
 			path = "New Group/New Group/View";
-			sourceTree = "<group>";
-		};
-		1BB30FF229DA87BF00C35684 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1BB30FFA29DB682500C35684 /* collectionViewModel.swift */,
-			);
-			name = Model;
-			path = "New Group/New Group/New Group/Model";
 			sourceTree = "<group>";
 		};
 		1BB30FF729DB5FAC00C35684 /* Cell */ = {
@@ -289,10 +271,10 @@
 				1BB30FE129DA7C1B00C35684 /* SignInViewScreen.swift in Sources */,
 				1BB30FCD29DA781400C35684 /* MultitechOS.xcdatamodeld in Sources */,
 				1BB30FED29DA852100C35684 /* SignInViewModel.swift in Sources */,
+				1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */,
 				1BB30FF429DA881700C35684 /* HomeViewController.swift in Sources */,
 				1BB30FF929DB5FAC00C35684 /* HomeCollectionViewCell.swift in Sources */,
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
-				1BB30FFB29DB682500C35684 /* collectionViewModel.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
 				1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */,
 				1BB30FF629DA973700C35684 /* HomeViewScreen.swift in Sources */,

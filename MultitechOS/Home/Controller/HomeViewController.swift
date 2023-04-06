@@ -10,51 +10,44 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let homeViewScreen = HomeViewScreen()
-    let dataListMock = ItemListMock.shared
-    var list: [Item]?
+    var items: [Item] = []
     
     override func loadView() {
         self.view = self.homeViewScreen
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeViewScreen.configProtocolsCollectionView(delegate: self, dataSource: self)
-        
-        populateList()
+        addData()
     }
     
-    func populateList() {
-        dataListMock.addItems { items in
-            self.list = items
+    func addData() {
+        loadItems { items in
+            self.items = items
         }
     }
 }
-
-extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let count = list?.count {
-            return count
-        }
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeViewScreen.identifier, for: indexPath) as! HomeCollectionViewCell
+    extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         
-        if let item = list?[indexPath.item] {
-            cell.items = item
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return items.count
         }
         
-        return cell
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: homeViewScreen.identifier, for: indexPath) as! HomeCollectionViewCell
+            let item = items[indexPath.item]
+            cell.nameLabel.text = item.name
+            cell.profileImage.image = UIImage(systemName: item.image)
+            return cell
+        }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 180, height: 180)
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 18
+        }
+        
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 180)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 18
-    }
-
-}
