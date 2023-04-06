@@ -10,6 +10,8 @@
 		1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830B929DF33B50001849C /* ClientsViewScreen.swift */; };
 		1B1830BC29DF342B0001849C /* ClientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BB29DF342B0001849C /* ClientsTableViewCell.swift */; };
 		1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BD29DF48860001849C /* BaseTableViewCell.swift */; };
+		1B1830C029DF73170001849C /* ServicesViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BF29DF73170001849C /* ServicesViewScreen.swift */; };
+		1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
 		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
 		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
@@ -39,6 +41,8 @@
 		1B1830B929DF33B50001849C /* ClientsViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewScreen.swift; sourceTree = "<group>"; };
 		1B1830BB29DF342B0001849C /* ClientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableViewCell.swift; sourceTree = "<group>"; };
 		1B1830BD29DF48860001849C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		1B1830BF29DF73170001849C /* ServicesViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewScreen.swift; sourceTree = "<group>"; };
+		1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1B1830C329DF741A0001849C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B1830BF29DF73170001849C /* ServicesViewScreen.swift */,
+				1B1830C429DF74230001849C /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B1830C429DF74230001849C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1B1830C529DF74320001849C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F40029DE7B580073A386 /* ServicesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1B91F3E029DE71F40073A386 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +184,8 @@
 		1B91F3EF29DE7A710073A386 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1B91F40029DE7B580073A386 /* ServicesViewController.swift */,
+				1B1830C529DF74320001849C /* Controller */,
+				1B1830C329DF741A0001849C /* View */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -404,6 +434,7 @@
 			files = (
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
+				1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */,
 				1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */,
 				1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */,
 				1B91F3FF29DE7B470073A386 /* OSViewController.swift in Sources */,
@@ -420,6 +451,7 @@
 				1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */,
 				1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */,
 				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
+				1B1830C029DF73170001849C /* ServicesViewScreen.swift in Sources */,
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
 				1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */,

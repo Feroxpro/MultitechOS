@@ -1,5 +1,5 @@
 //
-//  ClientsViewController.swift
+//  ServicesViewController.swift
 //  MultitechOS
 //
 //  Created by Felipe Domingos on 06/04/23.
@@ -7,17 +7,17 @@
 
 import UIKit
 
-class ClientsViewController: UIViewController {
-    
-    let clientsViewScreen = ClientsViewScreen()
+class ServicesViewController: UIViewController {
+
+    let serviceViewScreen = ServicesViewScreen()
     
     override func loadView() {
-        self.view = self.clientsViewScreen
+        self.view = self.serviceViewScreen
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        clientsViewScreen.configProtocolsTableView(delegate: self, dataSource: self)
+        serviceViewScreen.configProtocolsTableView(delegate: self, dataSource: self)
         // Do any additional setup after loading the view.
     }
     
@@ -27,14 +27,14 @@ class ClientsViewController: UIViewController {
     }
 }
 
-extension ClientsViewController: UITableViewDataSource, UITableViewDelegate {
+extension ServicesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: clientsViewScreen.identifier, for: indexPath) as! ClientsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: serviceViewScreen.identifier, for: indexPath) as! ServiceTableViewCell
         return cell
     }
     

@@ -64,7 +64,6 @@ class ClientsTableViewCell: BaseTableViewCell {
     override func configureConstraints() {
         containerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            make.height.equalTo(80)
         }
         
         OsNumberLabel.snp.makeConstraints { make in
