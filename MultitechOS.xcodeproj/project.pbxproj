@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830B929DF33B50001849C /* ClientsViewScreen.swift */; };
+		1B1830BC29DF342B0001849C /* ClientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BB29DF342B0001849C /* ClientsTableViewCell.swift */; };
+		1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830BD29DF48860001849C /* BaseTableViewCell.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
 		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
 		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B1830B929DF33B50001849C /* ClientsViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewScreen.swift; sourceTree = "<group>"; };
+		1B1830BB29DF342B0001849C /* ClientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableViewCell.swift; sourceTree = "<group>"; };
+		1B1830BD29DF48860001849C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1830B429DF32930001849C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B1830B529DF329D0001849C /* Cell */,
+				1B1830B929DF33B50001849C /* ClientsViewScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B1830B529DF329D0001849C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1B1830BB29DF342B0001849C /* ClientsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1B1830B629DF32A90001849C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B91F40229DE7B670073A386 /* ClientsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B1830B729DF32B50001849C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B1830B829DF32BE0001849C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1B91F3E029DE71F40073A386 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +144,10 @@
 		1B91F3EE29DE7A5B0073A386 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				1B91F40229DE7B670073A386 /* ClientsViewController.swift */,
+				1B1830B829DF32BE0001849C /* Model */,
+				1B1830B429DF32930001849C /* View */,
+				1B1830B729DF32B50001849C /* ViewModel */,
+				1B1830B629DF32A90001849C /* Controller */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -254,6 +302,7 @@
 			children = (
 				1BB30FE829DA7D9800C35684 /* BaseViewCell.swift */,
 				1BB30FE929DA7D9800C35684 /* BaseView.swift */,
+				1B1830BD29DF48860001849C /* BaseTableViewCell.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -359,6 +408,7 @@
 				1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */,
 				1B91F3FF29DE7B470073A386 /* OSViewController.swift in Sources */,
 				1BB30FE129DA7C1B00C35684 /* SignInViewScreen.swift in Sources */,
+				1B1830BC29DF342B0001849C /* ClientsTableViewCell.swift in Sources */,
 				1BB30FCD29DA781400C35684 /* MultitechOS.xcdatamodeld in Sources */,
 				1BB30FED29DA852100C35684 /* SignInViewModel.swift in Sources */,
 				1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */,
@@ -368,9 +418,11 @@
 				1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */,
 				1B91F3FB29DE7B260073A386 /* FinishedOrdersViewController.swift in Sources */,
 				1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */,
+				1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */,
 				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
+				1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */,
 				1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */,
 				1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */,
 			);

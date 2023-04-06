@@ -44,7 +44,7 @@ class HomeViewScreen: BaseView {
         
         logoImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(60)
+            make.top.equalToSuperview().offset(100)
             make.width.equalTo(300)
             make.height.equalTo(130)
         }

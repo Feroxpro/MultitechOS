@@ -115,7 +115,7 @@ class SignInViewScreen: BaseView {
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(passwordTextField.snp.bottom).offset(60)
-            make.width.equalTo(120)
+            make.width.equalTo(280)
         }
     }
 }
