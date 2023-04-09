@@ -11,11 +11,7 @@ class HomeViewController: UIViewController {
     
     let homeViewScreen = HomeViewScreen()
     var items: [Item] = []
-    
-    lazy var viewModel: HomeViewModel = {
-        let vm = HomeViewModel(homeViewController: self)
-        return vm
-    }()
+    var viewModel: HomeViewModel?
     
     override func loadView() {
         self.view = self.homeViewScreen
@@ -23,6 +19,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         self.homeViewScreen.configProtocolsCollectionView(delegate: self, dataSource: self)
         addData()
     }
@@ -58,7 +55,6 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.didSelectItem(at: indexPath.row)
-        // continue com o código da função, caso necessário
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

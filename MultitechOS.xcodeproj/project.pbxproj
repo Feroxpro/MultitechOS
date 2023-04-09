@@ -14,13 +14,14 @@
 		1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */; };
 		1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */; };
 		1B1830CE29DF7C170001849C /* OrdersViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */; };
+		1B8A4FA929E1261100B8785E /* AddClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */; };
+		1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
 		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
 		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
 		1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F829DE7B170073A386 /* OrdersViewController.swift */; };
 		1B91F3FB29DE7B260073A386 /* FinishedOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3FA29DE7B260073A386 /* FinishedOrdersViewController.swift */; };
 		1B91F3FD29DE7B3C0073A386 /* WarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3FC29DE7B3C0073A386 /* WarrantyViewController.swift */; };
-		1B91F3FF29DE7B470073A386 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3FE29DE7B470073A386 /* OSViewController.swift */; };
 		1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40029DE7B580073A386 /* ServicesViewController.swift */; };
 		1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40229DE7B670073A386 /* ClientsViewController.swift */; };
 		1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96C98529DD19BD001E84B5 /* collectionModel.swift */; };
@@ -47,13 +48,14 @@
 		1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
 		1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewScreen.swift; sourceTree = "<group>"; };
+		1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientsViewController.swift; sourceTree = "<group>"; };
+		1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1B91F3F829DE7B170073A386 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		1B91F3FA29DE7B260073A386 /* FinishedOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedOrdersViewController.swift; sourceTree = "<group>"; };
 		1B91F3FC29DE7B3C0073A386 /* WarrantyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyViewController.swift; sourceTree = "<group>"; };
-		1B91F3FE29DE7B470073A386 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
 		1B91F40029DE7B580073A386 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		1B91F40229DE7B670073A386 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 		1B96C98529DD19BD001E84B5 /* collectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionModel.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				1B1830B429DF32930001849C /* View */,
 				1B1830B729DF32B50001849C /* ViewModel */,
 				1B1830B629DF32A90001849C /* Controller */,
+				1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -231,14 +234,6 @@
 				1B1830C329DF741A0001849C /* View */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		1B91F3F029DE7A780073A386 /* OS */ = {
-			isa = PBXGroup;
-			children = (
-				1B91F3FE29DE7B470073A386 /* OSViewController.swift */,
-			);
-			path = OS;
 			sourceTree = "<group>";
 		};
 		1B91F3F229DE7AA80073A386 /* Warranty */ = {
@@ -310,7 +305,6 @@
 				1B91F3F429DE7ADB0073A386 /* Orders */,
 				1B91F3F329DE7ABF0073A386 /* FinishedOrders */,
 				1B91F3F229DE7AA80073A386 /* Warranty */,
-				1B91F3F029DE7A780073A386 /* OS */,
 				1B91F3EF29DE7A710073A386 /* Services */,
 				1B91F3EE29DE7A5B0073A386 /* Clients */,
 				1BB30FEE29DA87A600C35684 /* Home */,
@@ -369,6 +363,7 @@
 			children = (
 				1BB30FD029DA781700C35684 /* LaunchScreen.storyboard */,
 				1BB30FCE29DA781700C35684 /* Assets.xcassets */,
+				1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -479,12 +474,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
+				1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
 				1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */,
 				1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */,
 				1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */,
 				1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */,
-				1B91F3FF29DE7B470073A386 /* OSViewController.swift in Sources */,
 				1BB30FE129DA7C1B00C35684 /* SignInViewScreen.swift in Sources */,
 				1B1830BC29DF342B0001849C /* ClientsTableViewCell.swift in Sources */,
 				1BB30FCD29DA781400C35684 /* MultitechOS.xcdatamodeld in Sources */,
@@ -502,6 +497,7 @@
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
 				1B1830CE29DF7C170001849C /* OrdersViewScreen.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
+				1B8A4FA929E1261100B8785E /* AddClientsViewController.swift in Sources */,
 				1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */,
 				1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */,
 				1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */,

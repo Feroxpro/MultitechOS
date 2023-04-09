@@ -8,19 +8,14 @@
 import UIKit
 
 class ClientsViewScreen: BaseView {
-
+    
     let identifier: String = "ClientsTableViewCell"
+    
     
     lazy var searchClients: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
         return textField
-    }()
-    
-    lazy var logoImage: UIImageView = {
-        let img = UIImageView()
-        img.image = UIImage(named: "logo01")
-        return img
     }()
     
     lazy var tableView: UITableView = {
@@ -30,13 +25,9 @@ class ClientsViewScreen: BaseView {
         return tableView
     }()
     
-    lazy var loginButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle("+ Cadastrar Cliente", for: .normal)
-        button.layer.cornerRadius = 10
-        return button
-    }()
+    var addButton: UIBarButtonItem?
+    
+    
     
     public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
         self.tableView.delegate = delegate
@@ -44,22 +35,15 @@ class ClientsViewScreen: BaseView {
     }
     
     override func addSubviews() {
-        addSubview(logoImage)
         addSubview(tableView)
         addSubview(searchClients)
-        addSubview(loginButton)
+        
     }
     
     override func configureConstraints() {
         
-        logoImage.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(80)
-            make.width.equalTo(120)
-            make.height.equalTo(60)
-        }
         searchClients.snp.makeConstraints { make in
-            make.top.equalTo(loginButton.snp.bottom).offset(30)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(60)
             make.centerX.equalToSuperview()
             make.width.equalTo(320)
             make.height.equalTo(40)
@@ -70,12 +54,6 @@ class ClientsViewScreen: BaseView {
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
-        }
-        
-        loginButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(logoImage.snp.bottom).offset(30)
-            make.width.equalTo(280)
         }
     }
 }

@@ -9,11 +9,7 @@ import Foundation
 
 class HomeViewModel {
     
-    private let homeViewController: HomeViewController?
-    
-    init (homeViewController: HomeViewController) {
-        self.homeViewController = homeViewController
-    }
+    weak var coordinator: MainCoordinator?
 
     private var selectedIndex: Int?
     
@@ -22,12 +18,10 @@ class HomeViewModel {
         
         switch numberIndex {
         case 0:
-            let clientsViewController = ClientsViewController()
-            self.homeViewController?.navigationController?.pushViewController(clientsViewController, animated: true)
+            coordinator?.goToClients()
             return
         case 1:
-            let serviceViewController = ServicesViewController()
-            self.homeViewController?.navigationController?.pushViewController(serviceViewController, animated: true)
+            coordinator?.goToServices()
             return
         case 2:
             let ordersViewController = OrdersViewController()
@@ -45,10 +39,8 @@ class HomeViewModel {
             let settingsViewController = SettingsViewController()
             self.homeViewController?.navigationController?.pushViewController(settingsViewController, animated: true)
             return
-            
         default:
             return
         }
-        
     }
 }

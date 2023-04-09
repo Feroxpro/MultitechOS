@@ -10,14 +10,20 @@ import UIKit
 class ClientsViewController: UIViewController {
     
     let clientsViewScreen = ClientsViewScreen()
+    weak var coordinator: MainCoordinator?
     
     override func loadView() {
         self.view = self.clientsViewScreen
+        setupBinds()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        navigationItem.title = "Clientes"
+        navigationItem.rightBarButtonItem = clientsViewScreen.addButton
         clientsViewScreen.configProtocolsTableView(delegate: self, dataSource: self)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -25,7 +31,20 @@ class ClientsViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    func setupBinds() {
+        clientsViewScreen.addButton = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addButtonTapped))
+    }
+    
+    @objc func addButtonTapped() {
+        coordinator?.goToAddClients()
+    }
 }
+
+
 
 extension ClientsViewController: UITableViewDataSource, UITableViewDelegate {
     

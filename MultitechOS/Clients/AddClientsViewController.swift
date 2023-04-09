@@ -1,24 +1,24 @@
 //
-//  OSViewController.swift
+//  AddClientsViewController.swift
 //  MultitechOS
 //
-//  Created by Felipe Domingos on 06/04/23.
+//  Created by Felipe Domingos on 08/04/23.
 //
 
 import UIKit
 
-class OSViewController: UIViewController {
+class AddClientsViewController: UIViewController {
+    
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cyan
+        view.backgroundColor = .red
+
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+
     /*
     // MARK: - Navigation
 
@@ -30,4 +30,3 @@ class OSViewController: UIViewController {
     */
 
 }
-
