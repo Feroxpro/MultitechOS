@@ -11,6 +11,7 @@ class SignInViewController: UIViewController {
     
     var signInVs: SignInViewScreen?
     var viewModel: SignInViewModel?
+    weak var coordinator:  MainCoordinator?
     
     override func loadView() {
         signInVs = SignInViewScreen()
@@ -36,8 +37,10 @@ class SignInViewController: UIViewController {
     
     private func initViewModel() {
         if let screen = self.signInVs {
-            viewModel = SignInViewModel(signInViewScreen: screen, signInViewController: self)
-            viewModel?.signInAction()
+            if let coordinator = coordinator {
+                viewModel = SignInViewModel(signInViewScreen: screen, signInViewController: self, coordinator: coordinator)
+                viewModel?.signInAction()
+            }
         }
     }
 }

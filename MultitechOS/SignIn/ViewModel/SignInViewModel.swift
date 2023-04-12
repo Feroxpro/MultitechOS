@@ -12,10 +12,12 @@ class SignInViewModel {
     
     private let signInViewScreen: SignInViewScreen?
     private let signInViewController: SignInViewController?
+    weak var coordinator: MainCoordinator?
     
-    init (signInViewScreen: SignInViewScreen, signInViewController: SignInViewController) {
+    init (signInViewScreen: SignInViewScreen, signInViewController: SignInViewController, coordinator: MainCoordinator) {
         self.signInViewScreen = signInViewScreen
         self.signInViewController = signInViewController
+        self.coordinator = coordinator
     }
     
     func signInAction() {
@@ -24,8 +26,7 @@ class SignInViewModel {
     
     @objc private func getApiPlay() {
         if signInViewScreen?.userTextField.text == "Admin" && signInViewScreen?.passwordTextField.text == "1234" {
-            let homeViewController = HomeViewController()
-            self.signInViewController?.navigationController?.pushViewController(homeViewController, animated: true)
+            coordinator?.goToHome()
         } else {
             let alert = UIAlertController(title: "Erro de autenticação", message: "Usuário ou senha incorretos", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)

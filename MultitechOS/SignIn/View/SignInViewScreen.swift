@@ -8,7 +8,16 @@
 import UIKit
 import SnapKit
 
+protocol SignInViewScreenProtocol: AnyObject {
+    func actionLoginButton()
+}
+
 class SignInViewScreen: BaseView {
+    
+    weak var delegate:SignInViewScreenProtocol?
+    func delegate(delegate:SignInViewScreenProtocol?){
+        self.delegate = delegate
+    }
     
     lazy var logoImage: UIImageView = {
         let img = UIImageView()
@@ -71,8 +80,13 @@ class SignInViewScreen: BaseView {
         button.backgroundColor = .red
         button.setTitle("Login", for: .normal)
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(self.tappedLoginbtn), for: .touchUpInside)
         return button
     }()
+    
+    @objc public func tappedLoginbtn() {
+        self.delegate?.actionLoginButton()
+    }
     
     override func addSubviews() {
         addSubview(BackGroundView)

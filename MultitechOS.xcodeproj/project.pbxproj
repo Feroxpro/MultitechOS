@@ -14,6 +14,7 @@
 		1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */; };
 		1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */; };
 		1B1830CE29DF7C170001849C /* OrdersViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */; };
+		1B2FC3A729E65F8000ABEC3E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2FC3A629E65F8000ABEC3E /* Coordinator.swift */; };
 		1B8A4FA929E1261100B8785E /* AddClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */; };
 		1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
@@ -48,6 +49,7 @@
 		1B1830C129DF732D0001849C /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		1B1830CB29DF7BFE0001849C /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
 		1B1830CD29DF7C170001849C /* OrdersViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewScreen.swift; sourceTree = "<group>"; };
+		1B2FC3A629E65F8000ABEC3E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientsViewController.swift; sourceTree = "<group>"; };
 		1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
@@ -361,8 +363,9 @@
 		1BB30FDF29DA7BED00C35684 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1BB30FD029DA781700C35684 /* LaunchScreen.storyboard */,
 				1BB30FCE29DA781700C35684 /* Assets.xcassets */,
+				1BB30FD029DA781700C35684 /* LaunchScreen.storyboard */,
+				1B2FC3A629E65F8000ABEC3E /* Coordinator.swift */,
 				1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */,
 			);
 			path = Resources;
@@ -491,6 +494,7 @@
 				1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */,
 				1B91F3FB29DE7B260073A386 /* FinishedOrdersViewController.swift in Sources */,
 				1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */,
+				1B2FC3A729E65F8000ABEC3E /* Coordinator.swift in Sources */,
 				1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */,
 				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
 				1B1830C029DF73170001849C /* ServicesViewScreen.swift in Sources */,

@@ -7,36 +7,45 @@
 
 import UIKit
 
-protocol Coordinator {
-    func start()
-}
-
 class MainCoordinator: Coordinator {
     
     var navigationController: UINavigationController
+    
+    var childCoordinators = [Coordinator] ()
+    
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
         let signViewcontroller = SignInViewController()
+        signViewcontroller.coordinator = self
         navigationController.pushViewController(signViewcontroller, animated: true)
     }
     
     func goToHome() {
         let homeViewController = HomeViewController()
+        homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)
     }
     
     func goToClients() {
         let clientsViewController = ClientsViewController()
+        clientsViewController.coordinator = self
         self.navigationController.pushViewController(clientsViewController, animated: true)
     }
     
     func goToAddClients() {
         let addclientsViewController = AddClientsViewController()
-        addclientsViewController.coordinator = self
-        self.navigationController.present(addclientsViewController, animated: true)
+        if #available(iOS 15.0, *) {
+            if let sheet = addclientsViewController.sheetPresentationController {
+                sheet.detents = [.medium(), .large()]
+                sheet.prefersGrabberVisible = true
+                addclientsViewController.coordinator = self
+                self.navigationController.present(addclientsViewController, animated: true)
+            }
+        }
     }
     
     func goToServices() {

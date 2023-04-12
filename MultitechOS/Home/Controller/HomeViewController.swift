@@ -10,8 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let homeViewScreen = HomeViewScreen()
-    var items: [Item] = []
     var viewModel: HomeViewModel?
+    var items: [Item] = []
+    weak var coordinator: MainCoordinator?
     
     override func loadView() {
         self.view = self.homeViewScreen
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .black
         self.homeViewScreen.configProtocolsCollectionView(delegate: self, dataSource: self)
         addData()
+        initViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +35,12 @@ class HomeViewController: UIViewController {
         loadItems { items in
             self.items = items
         }
+    }
+    
+    private func initViewModel() {
+            if let coordinator = coordinator {
+                viewModel = HomeViewModel(homeViewController: self, coordinator: coordinator)
+            }
     }
 }
 
@@ -54,7 +62,7 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.didSelectItem(at: indexPath.row)
+        viewModel?.didSelectItem(at: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
