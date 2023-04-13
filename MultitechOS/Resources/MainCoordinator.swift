@@ -40,7 +40,7 @@ class MainCoordinator: Coordinator {
         let addclientsViewController = AddClientsViewController()
         if #available(iOS 15.0, *) {
             if let sheet = addclientsViewController.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
+                sheet.detents = [.large(), .large()]
                 sheet.prefersGrabberVisible = true
                 addclientsViewController.coordinator = self
                 self.navigationController.present(addclientsViewController, animated: true)

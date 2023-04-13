@@ -29,24 +29,19 @@ class HomeViewModel {
             self.coodinator?.goToClients()
             return
         case 1:
-            let serviceViewController = ServicesViewController()
-            self.homeViewController.navigationController?.pushViewController(serviceViewController, animated: true)
+            self.coodinator?.goToServices()
             return
         case 2:
-            let ordersViewController = OrdersViewController()
-            self.homeViewController.navigationController?.pushViewController(ordersViewController, animated: true)
+            self.coodinator?.goToOrders()
             return
         case 3:
-            let warrantyViewController = WarrantyViewController()
-            self.homeViewController.navigationController?.pushViewController(warrantyViewController, animated: true)
+            self.coodinator?.goToWarranty()
             return
         case 4:
-            let finishedOrdersViewController = FinishedOrdersViewController()
-            self.homeViewController.navigationController?.pushViewController(finishedOrdersViewController, animated: true)
+            self.coodinator?.goToFinished()
             return
         case 5:
-            let settingsViewController = SettingsViewController()
-            self.homeViewController.navigationController?.pushViewController(settingsViewController, animated: true)
+            self.coodinator?.goToSettings()
             return
         default:
             return

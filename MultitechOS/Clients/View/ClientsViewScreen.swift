@@ -11,11 +11,12 @@ class ClientsViewScreen: BaseView {
     
     let identifier: String = "ClientsTableViewCell"
     
-    
-    lazy var searchClients: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        return textField
+    lazy var searchClients: UISearchController = {
+        let search = UISearchController()
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Buscar"
+        search.definesPresentationContext = true
+        return search
     }()
     
     lazy var tableView: UITableView = {
@@ -36,21 +37,14 @@ class ClientsViewScreen: BaseView {
     
     override func addSubviews() {
         addSubview(tableView)
-        addSubview(searchClients)
         
     }
     
     override func configureConstraints() {
         
-        searchClients.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(60)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(320)
-            make.height.equalTo(40)
-        }
         
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(searchClients.snp.bottom).offset(30)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(50)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
