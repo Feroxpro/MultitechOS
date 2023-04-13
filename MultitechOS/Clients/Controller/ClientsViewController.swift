@@ -16,7 +16,7 @@ class ClientsViewController: UIViewController {
         self.view = self.clientsViewScreen
         setupBinds()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -26,8 +26,7 @@ class ClientsViewController: UIViewController {
         navigationItem.titleView?.tintColor = .white
         navigationItem.rightBarButtonItem = clientsViewScreen.addButton
         clientsViewScreen.configProtocolsTableView(delegate: self, dataSource: self)
-        
-        // Do any additional setup after loading the view.
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,13 +59,12 @@ extension ClientsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
 }
 
 extension ClientsViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        // Aquí debes actualizar los resultados de búsqueda en función de lo que el usuario escribe en la barra de búsqueda.
     }
 }

@@ -12,6 +12,11 @@ class RegisterViewModel {
     
     var rest = RestManager()
     var custumerBaseViewScreen = CustumerBaseViewScreen()
+    
+    init(rest: RestManager = RestManager(), custumerBaseViewScreen: CustumerBaseViewScreen = CustumerBaseViewScreen()) {
+        self.rest = rest
+        self.custumerBaseViewScreen = custumerBaseViewScreen
+    }
 
     func validateCepField(textField: UITextField, cep: String, completion: @escaping(_ register: Register) -> Void) {
         if textField.text?.isEmpty == false && textField.endEditing(true) {

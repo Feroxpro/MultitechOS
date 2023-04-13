@@ -44,8 +44,6 @@ class ClientsTableViewCell: BaseTableViewCell {
         return label
     }()
     
-    
-    
     override func addSubviews() {
         addSubview(containerView)
         containerView.addSubview(OsNumberLabel)
@@ -57,7 +55,6 @@ class ClientsTableViewCell: BaseTableViewCell {
     override func configureConstraints() {
         containerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            make.height.equalTo(80)
         }
         
         OsNumberLabel.snp.makeConstraints { make in

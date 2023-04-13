@@ -96,7 +96,6 @@ class CustumerBaseViewScreen: BaseView {
         addSubview(StateTextField)
     }
     
-    
     override func configureConstraints() {
         CpfTextField.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(60)
