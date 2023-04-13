@@ -10,31 +10,35 @@ import UIKit
 class AddClientsViewController: UIViewController {
     
     weak var coordinator: MainCoordinator?
-    var custumerBaseViewScreen: CustumerBaseViewScreen?
+    var screen: CustumerBaseViewScreen?
     var viewModel = RegisterViewModel()
     
     override func loadView() {
-        custumerBaseViewScreen = CustumerBaseViewScreen()
-        view = custumerBaseViewScreen
+        screen = CustumerBaseViewScreen()
+        view = screen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        self.custumerBaseViewScreen?.cepTextField.delegate = self
+        self.screen?.cepTextField.delegate = self
     }
 }
 
 extension AddClientsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        viewModel.validateCepField(textField: custumerBaseViewScreen?.cepTextField ?? textField, cep: custumerBaseViewScreen?.cepTextField.text ?? "") { register in
-            self.initViewModel(data: register)
+        if let cepText = screen?.cepTextField.text {
+            if let cepTextField = screen?.cepTextField{
+                viewModel.validateCepField(textField: cepTextField, cep: cepText) { register in
+                    self.initViewModel(data: register)
+                }
+            }
         }
     }
     
     func initViewModel(data: Register) {
-        if let screen = self.custumerBaseViewScreen {
+        if let screen = self.screen {
             viewModel = RegisterViewModel(custumerBaseViewScreen: screen)
         }
         viewModel.addData(register: data)
