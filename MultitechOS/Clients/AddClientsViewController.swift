@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddClientsViewController: UIViewController, UITextFieldDelegate {
+class AddClientsViewController: UIViewController {
     
     weak var coordinator: MainCoordinator?
     var custumerBaseViewScreen: CustumerBaseViewScreen?
@@ -23,6 +23,9 @@ class AddClientsViewController: UIViewController, UITextFieldDelegate {
         view.backgroundColor = .black
         self.custumerBaseViewScreen?.cepTextField.delegate = self
     }
+}
+
+extension AddClientsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         viewModel.validateCepField(textField: custumerBaseViewScreen?.cepTextField ?? textField, cep: custumerBaseViewScreen?.cepTextField.text ?? "") { register in
@@ -36,4 +39,5 @@ class AddClientsViewController: UIViewController, UITextFieldDelegate {
         }
         viewModel.addData(register: data)
     }
+    
 }
