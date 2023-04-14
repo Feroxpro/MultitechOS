@@ -11,82 +11,123 @@ import SnapKit
 
 class CustumerBaseViewScreen: BaseView {
     
+    lazy var titleDataLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Dados Pessoais"
+        label.textColor = .white
+        return label
+    }()
+    
     lazy var CpfTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Insira seu CPF"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu CPF", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var nameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Insira seu nome completo"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu nome completo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var phoneTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Insira seu celular"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu celular", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
+    }()
+    
+    lazy var titleAddresLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Endereço"
+        label.textColor = .white
+        return label
     }()
     
     lazy var cepTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
         textField.isUserInteractionEnabled = true
-        textField.placeholder = " CEP (somente numeros)"
+        textField.attributedPlaceholder = NSAttributedString(string: " CEP (somente numeros)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var nameStreetTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Logradouro"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Logradouro", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var numberStreetTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Numero"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Numero", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var complementTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Complemento"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Complemento", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var districtTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Bairro"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Bairro", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var cityTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " Cidade"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " Cidade", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var StateTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
-        textField.placeholder = " UF"
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
+        textField.attributedPlaceholder = NSAttributedString(string: " UF", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
+    lazy var saveButton: UIButton = {
+        let button = ButtonPattern()
+        button.setTitle("Login", for: .normal)
+        return button
+    }()
     
     override func addSubviews() {
+        addSubview(titleDataLabel)
         addSubview(CpfTextField)
         addSubview(nameTextField)
         addSubview(phoneTextField)
+        addSubview(titleAddresLabel)
         addSubview(cepTextField)
         addSubview(nameStreetTextField)
         addSubview(numberStreetTextField)
@@ -94,29 +135,43 @@ class CustumerBaseViewScreen: BaseView {
         addSubview(districtTextField)
         addSubview(cityTextField)
         addSubview(StateTextField)
+        addSubview(saveButton)
     }
     
     override func configureConstraints() {
-        CpfTextField.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(60)
+        titleDataLabel.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(30)
             make.centerX.equalToSuperview()
+        }
+        
+        CpfTextField.snp.makeConstraints { make in
+            make.top.equalTo(titleDataLabel.snp.top).offset(60)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
             make.height.equalTo(40)
             make.width.equalTo(360)
         }
         nameTextField.snp.makeConstraints { make in
             make.top.equalTo(CpfTextField.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
             make.height.equalTo(40)
             make.width.equalTo(360)
         }
         phoneTextField.snp.makeConstraints { make in
             make.top.equalTo(nameTextField.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
             make.height.equalTo(40)
             make.width.equalTo(360)
         }
+        titleAddresLabel.snp.makeConstraints { make in
+            make.top.equalTo(phoneTextField.snp.bottom).offset(30)
+            make.centerX.equalToSuperview()
+            
+        }
         cepTextField.snp.makeConstraints { make in
-            make.top.equalTo(phoneTextField.snp.bottom).offset(100)
+            make.top.equalTo(titleAddresLabel.snp.bottom).offset(60)
             make.centerX.equalToSuperview()
             make.height.equalTo(40)
             make.width.equalTo(100)
@@ -157,7 +212,12 @@ class CustumerBaseViewScreen: BaseView {
             make.height.equalTo(40)
             make.width.equalTo(60)
         }
+        saveButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(StateTextField.snp.bottom).offset(60)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(40)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(40)
+        }
+        
     }
-    
-    
 }

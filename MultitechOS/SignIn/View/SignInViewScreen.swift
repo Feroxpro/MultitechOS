@@ -8,9 +8,7 @@
 import UIKit
 import SnapKit
 
-
 class SignInViewScreen: BaseView {
-    
     
     lazy var logoImage: UIImageView = {
         let img = UIImageView()
@@ -21,25 +19,27 @@ class SignInViewScreen: BaseView {
     lazy var userTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
         textField.font = UIFont.systemFont(ofSize: 20)
-        textField.placeholder = " Usuário"
+        textField.attributedPlaceholder = NSAttributedString(string: " Usuário", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
+        textField.textColor = .black
+        textField.layer.cornerRadius = 6
         textField.font = UIFont.systemFont(ofSize: 20)
-        textField.placeholder = " Senha"
+        textField.attributedPlaceholder = NSAttributedString(string: " Senha", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         textField.isSecureTextEntry = true
         return textField
     }()
     
     lazy var loginButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
+        let button = ButtonPattern()
         button.setTitle("Login", for: .normal)
-        button.layer.cornerRadius = 10
         return button
     }()
     
@@ -74,7 +74,8 @@ class SignInViewScreen: BaseView {
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(passwordTextField.snp.bottom).offset(60)
-            make.width.equalTo(360)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(40)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(40)
         }
     }
 }

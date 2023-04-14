@@ -13,8 +13,7 @@ class RegisterViewModel {
     var rest = RestManager()
     var custumerBaseViewScreen = CustumerBaseViewScreen()
     
-    init(rest: RestManager = RestManager(), custumerBaseViewScreen: CustumerBaseViewScreen = CustumerBaseViewScreen()) {
-        self.rest = rest
+    init(custumerBaseViewScreen: CustumerBaseViewScreen = CustumerBaseViewScreen()) {
         self.custumerBaseViewScreen = custumerBaseViewScreen
     }
 

@@ -20,6 +20,7 @@
 		1B2FC3B029E7835A00ABEC3E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2FC3AF29E7835A00ABEC3E /* Register.swift */; };
 		1B2FC3B229E7837000ABEC3E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2FC3B129E7837000ABEC3E /* RegisterViewModel.swift */; };
 		1B2FC3B529E783A900ABEC3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2FC3B429E783A900ABEC3E /* Alamofire */; };
+		1B52808229E875D100EEE6AC /* DefaultButton+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52808129E875D100EEE6AC /* DefaultButton+UIButton.swift */; };
 		1B8A4FA929E1261100B8785E /* AddClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */; };
 		1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
@@ -59,6 +60,7 @@
 		1B2FC3AC29E7833F00ABEC3E /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		1B2FC3AF29E7835A00ABEC3E /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		1B2FC3B129E7837000ABEC3E /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		1B52808129E875D100EEE6AC /* DefaultButton+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultButton+UIButton.swift"; sourceTree = "<group>"; };
 		1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientsViewController.swift; sourceTree = "<group>"; };
 		1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1B52808029E874CD00EEE6AC /* DefaultButton */ = {
+			isa = PBXGroup;
+			children = (
+				1B52808129E875D100EEE6AC /* DefaultButton+UIButton.swift */,
+			);
+			path = DefaultButton;
+			sourceTree = "<group>";
+		};
 		1B91F3E029DE71F40073A386 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,8 +270,10 @@
 		1B91F3EF29DE7A710073A386 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1B1830C529DF74320001849C /* Controller */,
+				1BA1B99529E8F513004E35A6 /* Model */,
 				1B1830C329DF741A0001849C /* View */,
+				1BA1B99629E8F51B004E35A6 /* ViewModel */,
+				1B1830C529DF74320001849C /* Controller */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,6 +319,20 @@
 				1B96C98529DD19BD001E84B5 /* collectionModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1BA1B99529E8F513004E35A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BA1B99629E8F51B004E35A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1BB30FB629DA781400C35684 = {
@@ -392,6 +418,7 @@
 		1BB30FDF29DA7BED00C35684 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B52808029E874CD00EEE6AC /* DefaultButton */,
 				1B2FC3AB29E7833F00ABEC3E /* Network */,
 				1BB30FCE29DA781700C35684 /* Assets.xcassets */,
 				1BB30FD029DA781700C35684 /* LaunchScreen.storyboard */,
@@ -525,6 +552,7 @@
 				1B2FC3AA29E7732200ABEC3E /* CustumerBaseViewScreen.swift in Sources */,
 				1B2FC3B029E7835A00ABEC3E /* Register.swift in Sources */,
 				1B91F3FD29DE7B3C0073A386 /* WarrantyViewController.swift in Sources */,
+				1B52808229E875D100EEE6AC /* DefaultButton+UIButton.swift in Sources */,
 				1BB30FF429DA881700C35684 /* HomeViewController.swift in Sources */,
 				1BB30FF929DB5FAC00C35684 /* HomeCollectionViewCell.swift in Sources */,
 				1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */,

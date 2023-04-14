@@ -23,6 +23,10 @@ class AddClientsViewController: UIViewController {
         view.backgroundColor = .black
         self.screen?.cepTextField.delegate = self
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension AddClientsViewController: UITextFieldDelegate {
