@@ -38,19 +38,19 @@ class MainCoordinator: Coordinator {
     
     func goToAddClients() {
         let addclientsViewController = AddClientsViewController()
-        if #available(iOS 15.0, *) {
-            if let sheet = addclientsViewController.sheetPresentationController {
-                sheet.detents = [.large(), .large()]
-                sheet.prefersGrabberVisible = true
-                addclientsViewController.coordinator = self
-                self.navigationController.present(addclientsViewController, animated: true)
-            }
-        }
+        addclientsViewController.coordinator = self
+        self.navigationController.present(addclientsViewController, animated: true)
     }
     
     func goToServices() {
         let serviceViewController = ServicesViewController()
         self.navigationController.pushViewController(serviceViewController, animated: true)
+    }
+    
+    func goToAddService() {
+        let addServiceViewController = AddServiceViewController()
+        addServiceViewController.coordinator = self
+        self.navigationController.present(addServiceViewController, animated: true)
     }
     
     func goToOrders() {

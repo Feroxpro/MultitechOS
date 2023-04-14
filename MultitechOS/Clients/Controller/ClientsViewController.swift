@@ -23,7 +23,6 @@ class ClientsViewController: UIViewController {
         navigationItem.searchController = clientsViewScreen.searchClients
         navigationItem.hidesSearchBarWhenScrolling = true
         navigationItem.title = "Clientes"
-        navigationItem.titleView?.tintColor = .white
         navigationItem.rightBarButtonItem = clientsViewScreen.addButton
         clientsViewScreen.configProtocolsTableView(delegate: self, dataSource: self)
     
@@ -45,8 +44,6 @@ class ClientsViewController: UIViewController {
         coordinator?.goToAddClients()
     }
 }
-
-
 
 extension ClientsViewController: UITableViewDataSource, UITableViewDelegate {
     

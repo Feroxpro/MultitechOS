@@ -32,6 +32,7 @@
 		1B91F40129DE7B580073A386 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40029DE7B580073A386 /* ServicesViewController.swift */; };
 		1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40229DE7B670073A386 /* ClientsViewController.swift */; };
 		1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96C98529DD19BD001E84B5 /* collectionModel.swift */; };
+		1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */; };
 		1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC229DA781400C35684 /* AppDelegate.swift */; };
 		1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC429DA781400C35684 /* SceneDelegate.swift */; };
 		1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC629DA781400C35684 /* SignInViewController.swift */; };
@@ -72,6 +73,7 @@
 		1B91F40029DE7B580073A386 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		1B91F40229DE7B670073A386 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 		1B96C98529DD19BD001E84B5 /* collectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionModel.swift; sourceTree = "<group>"; };
+		1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		1BB30FBF29DA781400C35684 /* MultitechOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultitechOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB30FC229DA781400C35684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB30FC429DA781400C35684 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		1B1830B629DF32A90001849C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */,
 				1B91F40229DE7B670073A386 /* ClientsViewController.swift */,
 			);
 			path = Controller;
@@ -156,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1B91F40029DE7B580073A386 /* ServicesViewController.swift */,
+				1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,7 +266,6 @@
 				1B1830B429DF32930001849C /* View */,
 				1B1830B729DF32B50001849C /* ViewModel */,
 				1B1830B629DF32A90001849C /* Controller */,
-				1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
+				1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */,
 				1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
 				1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */,
