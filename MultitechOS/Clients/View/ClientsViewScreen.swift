@@ -44,7 +44,7 @@ class ClientsViewScreen: BaseView {
         
         
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(50)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)

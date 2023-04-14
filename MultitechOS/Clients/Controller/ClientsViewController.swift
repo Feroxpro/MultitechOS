@@ -21,7 +21,7 @@ class ClientsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         navigationItem.searchController = clientsViewScreen.searchClients
-        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.title = "Clientes"
         navigationItem.rightBarButtonItem = clientsViewScreen.addButton
         clientsViewScreen.configProtocolsTableView(delegate: self, dataSource: self)

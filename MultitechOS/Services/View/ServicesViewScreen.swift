@@ -11,7 +11,7 @@ class ServicesViewScreen: BaseView {
 
     let identifier: String = "ServiceTableViewCell"
         
-        lazy var searchClients: UISearchController = {
+        lazy var searchService: UISearchController = {
             let search = UISearchController()
             search.obscuresBackgroundDuringPresentation = false
             search.searchBar.placeholder = "Buscar"

@@ -65,8 +65,8 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
         viewModel?.didSelectItem(at: indexPath.row)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 18
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 18
+//    }
     
 }

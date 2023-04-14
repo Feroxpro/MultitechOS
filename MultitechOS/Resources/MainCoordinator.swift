@@ -19,57 +19,65 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let signViewcontroller = SignInViewController()
-        signViewcontroller.coordinator = self
-        navigationController.pushViewController(signViewcontroller, animated: true)
+        let viewController = SignInViewController()
+        viewController.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToHome() {
-        let homeViewController = HomeViewController()
-        homeViewController.coordinator = self
-        navigationController.pushViewController(homeViewController, animated: true)
+        let viewController = HomeViewController()
+        viewController.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToClients() {
-        let clientsViewController = ClientsViewController()
-        clientsViewController.coordinator = self
-        self.navigationController.pushViewController(clientsViewController, animated: true)
+        let viewController = ClientsViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToAddClients() {
-        let addclientsViewController = AddClientsViewController()
-        addclientsViewController.coordinator = self
-        self.navigationController.present(addclientsViewController, animated: true)
+        let viewController = AddClientsViewController()
+        viewController.coordinator = self
+        self.navigationController.present(viewController, animated: true)
     }
     
     func goToServices() {
-        let serviceViewController = ServicesViewController()
-        self.navigationController.pushViewController(serviceViewController, animated: true)
+        let viewController = ServicesViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToAddService() {
-        let addServiceViewController = AddServiceViewController()
-        addServiceViewController.coordinator = self
-        self.navigationController.present(addServiceViewController, animated: true)
+        let viewController = AddServiceViewController()
+        viewController.coordinator = self
+        self.navigationController.present(viewController, animated: true)
     }
     
     func goToOrders() {
-        let ordersViewController = OrdersViewController()
-        self.navigationController.pushViewController(ordersViewController, animated: true)
+        let viewController = OrdersViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToAddOrders() {
+        let viewController = AddOrdersViewController()
+        viewController.coordinator = self
+        self.navigationController.present(viewController, animated: true)
     }
     
     func goToWarranty() {
-        let warrantyViewController = WarrantyViewController()
-        self.navigationController.pushViewController(warrantyViewController, animated: true)
+        let viewController = WarrantyViewController()
+        self.navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToFinished() {
-        let finishedOrdersViewController = FinishedOrdersViewController()
-        self.navigationController.pushViewController(finishedOrdersViewController, animated: true)
+        let viewController = FinishedOrdersViewController()
+        self.navigationController.pushViewController(viewController, animated: true)
     }
     
     func goToSettings() {
-        let settingsViewController = SettingsViewController()
-        self.navigationController.pushViewController(settingsViewController, animated: true)
+        let viewController = SettingsViewController()
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

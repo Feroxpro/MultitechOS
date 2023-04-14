@@ -20,7 +20,7 @@ class ServicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        navigationItem.searchController = serviceViewScreen.searchClients
+        navigationItem.searchController = serviceViewScreen.searchService
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.title = "Serviços"
         navigationItem.titleView?.tintColor = .white
