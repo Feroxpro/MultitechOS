@@ -11,6 +11,8 @@ class OrdersViewController: UIViewController {
     
     let screen = OrdersViewScreen()
     weak var coordinator: MainCoordinator?
+    var viewModel: OrdersSelectedViewModel?
+    
     
     override func loadView() {
         self.view = self.screen
@@ -25,7 +27,7 @@ class OrdersViewController: UIViewController {
         navigationItem.title = "Ordem de serviços"
         navigationItem.rightBarButtonItem = screen.addButton
         screen.configProtocolsTableView(delegate: self, dataSource: self)
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,9 +43,18 @@ class OrdersViewController: UIViewController {
     }
     
     @objc func addButtonTapped() {
-        coordinator?.goToAddOrders()
+        initViewModel()
+    }
+    
+    func initViewModel() {
+        if let coordinator = coordinator {
+            viewModel = OrdersSelectedViewModel(viewController: self, coordinator: coordinator)
+        }
+        viewModel?.showDeviceAlert()
     }
 }
+
+
 
 extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
     

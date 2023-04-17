@@ -32,9 +32,9 @@ class AddClientViewModel {
     }
     
     func showAlertConfirmDataOSClient() {
-        let alertController = UIAlertController(title: "Cliente cadastrado com sucesso", message: "Somente cadastrar ou criar OS com os dados", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Cliente cadastrado com sucesso", message: "Somente cadastrar ou criar OS", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Sair", style: .cancel) { _ in
+        let cancelAction = UIAlertAction(title: "Voltar", style: .default) { _ in
             if let viewController = self.viewController {
                 viewController.dismiss(animated: true, completion: nil)
             }
@@ -44,8 +44,7 @@ class AddClientViewModel {
                 viewController.dismiss(animated: true, completion: nil)
             }
             self.clientViewController.dismiss(animated: false)
-            self.ordersViewController.setupBinds()
-            self.coordinator?.goToAddOrders()
+            self.coordinator?.goToOrders()
         }
         
         alertController.addAction(cancelAction)

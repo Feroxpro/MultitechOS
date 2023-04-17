@@ -25,6 +25,10 @@
 		1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */; };
 		1B8FDB3C29ECF6DF007C02ED /* TitleLabel+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB3B29ECF6DF007C02ED /* TitleLabel+UILabel.swift */; };
 		1B8FDB3E29ECFB61007C02ED /* AddClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB3D29ECFB61007C02ED /* AddClientViewModel.swift */; };
+		1B8FDB4029ED071C007C02ED /* AddOrderGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB3F29ED071C007C02ED /* AddOrderGameViewController.swift */; };
+		1B8FDB4229ED075E007C02ED /* AddOrderComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB4129ED075E007C02ED /* AddOrderComputerViewController.swift */; };
+		1B8FDB4429ED077F007C02ED /* AddOrdemNotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB4329ED077F007C02ED /* AddOrdemNotebookViewController.swift */; };
+		1B8FDB4929ED13F3007C02ED /* OrdersSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB4829ED13F3007C02ED /* OrdersSelectedViewModel.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
 		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
 		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
@@ -35,7 +39,7 @@
 		1B91F40329DE7B670073A386 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F40229DE7B670073A386 /* ClientsViewController.swift */; };
 		1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96C98529DD19BD001E84B5 /* collectionModel.swift */; };
 		1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */; };
-		1BA1B99C29E9F547004E35A6 /* AddOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B99B29E9F547004E35A6 /* AddOrdersViewController.swift */; };
+		1BA1B99C29E9F547004E35A6 /* AddOrderMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B99B29E9F547004E35A6 /* AddOrderMobileViewController.swift */; };
 		1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC229DA781400C35684 /* AppDelegate.swift */; };
 		1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC429DA781400C35684 /* SceneDelegate.swift */; };
 		1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC629DA781400C35684 /* SignInViewController.swift */; };
@@ -69,6 +73,10 @@
 		1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1B8FDB3B29ECF6DF007C02ED /* TitleLabel+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleLabel+UILabel.swift"; sourceTree = "<group>"; };
 		1B8FDB3D29ECFB61007C02ED /* AddClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientViewModel.swift; sourceTree = "<group>"; };
+		1B8FDB3F29ED071C007C02ED /* AddOrderGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderGameViewController.swift; sourceTree = "<group>"; };
+		1B8FDB4129ED075E007C02ED /* AddOrderComputerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderComputerViewController.swift; sourceTree = "<group>"; };
+		1B8FDB4329ED077F007C02ED /* AddOrdemNotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrdemNotebookViewController.swift; sourceTree = "<group>"; };
+		1B8FDB4829ED13F3007C02ED /* OrdersSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersSelectedViewModel.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +87,7 @@
 		1B91F40229DE7B670073A386 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 		1B96C98529DD19BD001E84B5 /* collectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionModel.swift; sourceTree = "<group>"; };
 		1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
-		1BA1B99B29E9F547004E35A6 /* AddOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrdersViewController.swift; sourceTree = "<group>"; };
+		1BA1B99B29E9F547004E35A6 /* AddOrderMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderMobileViewController.swift; sourceTree = "<group>"; };
 		1BB30FBF29DA781400C35684 /* MultitechOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultitechOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB30FC229DA781400C35684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB30FC429DA781400C35684 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,8 +182,8 @@
 		1B1830C629DF7BC10001849C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1B8FDB4A29ED1709007C02ED /* AddOrderController */,
 				1B91F3F829DE7B170073A386 /* OrdersViewController.swift */,
-				1BA1B99B29E9F547004E35A6 /* AddOrdersViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 		1B1830C729DF7BC30001849C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1B8FDB4829ED13F3007C02ED /* OrdersSelectedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,6 +257,17 @@
 				1B8FDB3B29ECF6DF007C02ED /* TitleLabel+UILabel.swift */,
 			);
 			path = "TitleLabel+UILabel";
+			sourceTree = "<group>";
+		};
+		1B8FDB4A29ED1709007C02ED /* AddOrderController */ = {
+			isa = PBXGroup;
+			children = (
+				1BA1B99B29E9F547004E35A6 /* AddOrderMobileViewController.swift */,
+				1B8FDB3F29ED071C007C02ED /* AddOrderGameViewController.swift */,
+				1B8FDB4129ED075E007C02ED /* AddOrderComputerViewController.swift */,
+				1B8FDB4329ED077F007C02ED /* AddOrdemNotebookViewController.swift */,
+			);
+			path = AddOrderController;
 			sourceTree = "<group>";
 		};
 		1B91F3E029DE71F40073A386 /* View */ = {
@@ -580,16 +600,20 @@
 				1BB30FF929DB5FAC00C35684 /* HomeCollectionViewCell.swift in Sources */,
 				1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */,
 				1B91F3FB29DE7B260073A386 /* FinishedOrdersViewController.swift in Sources */,
-				1BA1B99C29E9F547004E35A6 /* AddOrdersViewController.swift in Sources */,
+				1BA1B99C29E9F547004E35A6 /* AddOrderMobileViewController.swift in Sources */,
+				1B8FDB4229ED075E007C02ED /* AddOrderComputerViewController.swift in Sources */,
 				1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */,
 				1B2FC3A729E65F8000ABEC3E /* Coordinator.swift in Sources */,
 				1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */,
+				1B8FDB4429ED077F007C02ED /* AddOrdemNotebookViewController.swift in Sources */,
+				1B8FDB4029ED071C007C02ED /* AddOrderGameViewController.swift in Sources */,
 				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
 				1B1830C029DF73170001849C /* ServicesViewScreen.swift in Sources */,
 				1BB30FEB29DA7D9800C35684 /* BaseView.swift in Sources */,
 				1B1830CE29DF7C170001849C /* OrdersViewScreen.swift in Sources */,
 				1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */,
 				1B8A4FA929E1261100B8785E /* AddClientsViewController.swift in Sources */,
+				1B8FDB4929ED13F3007C02ED /* OrdersSelectedViewModel.swift in Sources */,
 				1B1830BE29DF48860001849C /* BaseTableViewCell.swift in Sources */,
 				1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */,
 				1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */,

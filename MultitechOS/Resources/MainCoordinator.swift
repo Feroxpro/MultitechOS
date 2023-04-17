@@ -60,8 +60,26 @@ class MainCoordinator: Coordinator {
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToAddOrders() {
-        let viewController = AddOrdersViewController()
+    func goToAddOrdersMobile() {
+        let viewController = AddOrderMobileViewController()
+        viewController.coordinator = self
+        self.navigationController.present(viewController, animated: true)
+    }
+    
+    func goToAddOrdersComputer() {
+        let viewController = AddOrderComputerViewController()
+        viewController.coordinator = self
+        self.navigationController.present(viewController, animated: true)
+    }
+    
+    func goToAddOrdersGame() {
+        let viewController = AddOrderGameViewController()
+        viewController.coordinator = self
+        self.navigationController.present(viewController, animated: true)
+    }
+    
+    func goToAddOrdersNotebook() {
+        let viewController = AddOrderNotebookViewController()
         viewController.coordinator = self
         self.navigationController.present(viewController, animated: true)
     }

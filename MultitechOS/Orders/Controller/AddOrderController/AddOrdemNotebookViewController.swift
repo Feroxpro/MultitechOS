@@ -1,19 +1,19 @@
 //
-//  AddOrdersViewController.swift
+//  AddOrdemNotebookViewController.swift
 //  MultitechOS
 //
-//  Created by Felipe Domingos on 14/04/23.
+//  Created by Felipe Domingos on 17/04/23.
 //
 
 import UIKit
 
-class AddOrdersViewController: UIViewController {
+class AddOrderNotebookViewController: UIViewController {
     
     weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .systemPink
         // Do any additional setup after loading the view.
     }
     
