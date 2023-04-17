@@ -38,9 +38,9 @@ class HomeViewController: UIViewController {
     }
     
     private func initViewModel() {
-            if let coordinator = coordinator {
-                viewModel = HomeViewModel(homeViewController: self, coordinator: coordinator)
-            }
+        if let coordinator = coordinator {
+            viewModel = HomeViewModel(homeViewController: self, coordinator: coordinator)
+        }
     }
 }
 
@@ -65,8 +65,7 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
         viewModel?.didSelectItem(at: indexPath.row)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 18
-//    }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
 }

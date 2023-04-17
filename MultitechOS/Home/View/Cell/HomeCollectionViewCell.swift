@@ -13,7 +13,7 @@ class HomeCollectionViewCell: BaseViewCell {
     lazy var serviceView: UIView = {
         let img = UIView()
         img.layer.cornerRadius = 10
-//        img.layer.masksToBounds = true
+        img.layer.masksToBounds = true
         img.backgroundColor = .white
         return img
     }()

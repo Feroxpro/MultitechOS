@@ -25,6 +25,13 @@ class HomeViewScreen: BaseView {
         collectionView.delaysContentTouches = false
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width / 2)
+        let cellHeight = floor(screenSize.height / 6)
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        collectionView.collectionViewLayout = layout
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         return collectionView
@@ -48,11 +55,11 @@ class HomeViewScreen: BaseView {
             make.width.equalTo(300)
             make.height.equalTo(130)
         }
-        collectionView.snp.makeConstraints { (make) in
+        collectionView.snp.makeConstraints { make in
             make.top.equalTo(logoImage.snp.bottom).offset(30)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).inset(18)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(18)
-            make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
+            make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(18)
         }
     }
 }

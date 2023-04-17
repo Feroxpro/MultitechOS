@@ -22,7 +22,7 @@ class OrdersViewController: UIViewController {
         view.backgroundColor = .black
         navigationItem.searchController = screen.searchOrders
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.title = "Clientes"
+        navigationItem.title = "Ordem de serviços"
         navigationItem.rightBarButtonItem = screen.addButton
         screen.configProtocolsTableView(delegate: self, dataSource: self)
     

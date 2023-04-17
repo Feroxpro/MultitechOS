@@ -12,9 +12,7 @@ import SnapKit
 class CustumerBaseViewScreen: BaseView {
     
     lazy var titleDataLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Dados Pessoais"
-        label.textColor = .white
+        let label = Titlelabel(text: "Dados Pessoais")
         return label
     }()
     
@@ -46,9 +44,7 @@ class CustumerBaseViewScreen: BaseView {
     }()
     
     lazy var titleAddresLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Endereço"
-        label.textColor = .white
+        let label = Titlelabel(text: "Endereço")
         return label
     }()
     
@@ -117,8 +113,7 @@ class CustumerBaseViewScreen: BaseView {
     }()
     
     lazy var saveButton: UIButton = {
-        let button = ButtonPattern()
-        button.setTitle("Login", for: .normal)
+        let button = DefaultButton(title: "Cadastrar")
         return button
     }()
     
@@ -171,7 +166,7 @@ class CustumerBaseViewScreen: BaseView {
             
         }
         cepTextField.snp.makeConstraints { make in
-            make.top.equalTo(titleAddresLabel.snp.bottom).offset(60)
+            make.top.equalTo(titleAddresLabel.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
             make.height.equalTo(40)
             make.width.equalTo(100)
@@ -215,8 +210,6 @@ class CustumerBaseViewScreen: BaseView {
         saveButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(StateTextField.snp.bottom).offset(60)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(40)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(40)
         }
         
     }

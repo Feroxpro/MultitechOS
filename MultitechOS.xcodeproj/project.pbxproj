@@ -23,6 +23,8 @@
 		1B52808229E875D100EEE6AC /* DefaultButton+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52808129E875D100EEE6AC /* DefaultButton+UIButton.swift */; };
 		1B8A4FA929E1261100B8785E /* AddClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */; };
 		1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */; };
+		1B8FDB3C29ECF6DF007C02ED /* TitleLabel+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB3B29ECF6DF007C02ED /* TitleLabel+UILabel.swift */; };
+		1B8FDB3E29ECFB61007C02ED /* AddClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FDB3D29ECFB61007C02ED /* AddClientViewModel.swift */; };
 		1B91F3E229DE71FD0073A386 /* HomeViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */; };
 		1B91F3E629DE75DA0073A386 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */; };
 		1B91F3F729DE7B030073A386 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91F3F629DE7B030073A386 /* SettingsViewController.swift */; };
@@ -65,6 +67,8 @@
 		1B52808129E875D100EEE6AC /* DefaultButton+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultButton+UIButton.swift"; sourceTree = "<group>"; };
 		1B8A4FA829E1261100B8785E /* AddClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientsViewController.swift; sourceTree = "<group>"; };
 		1B8A4FAA29E12AF000B8785E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1B8FDB3B29ECF6DF007C02ED /* TitleLabel+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleLabel+UILabel.swift"; sourceTree = "<group>"; };
+		1B8FDB3D29ECFB61007C02ED /* AddClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientViewModel.swift; sourceTree = "<group>"; };
 		1B91F3E129DE71FD0073A386 /* HomeViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewScreen.swift; sourceTree = "<group>"; };
 		1B91F3E529DE75DA0073A386 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B91F3F629DE7B030073A386 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1B2FC3B129E7837000ABEC3E /* RegisterViewModel.swift */,
+				1B8FDB3D29ECFB61007C02ED /* AddClientViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +240,14 @@
 				1B52808129E875D100EEE6AC /* DefaultButton+UIButton.swift */,
 			);
 			path = DefaultButton;
+			sourceTree = "<group>";
+		};
+		1B8FDB3A29ECF6BB007C02ED /* TitleLabel+UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				1B8FDB3B29ECF6DF007C02ED /* TitleLabel+UILabel.swift */,
+			);
+			path = "TitleLabel+UILabel";
 			sourceTree = "<group>";
 		};
 		1B91F3E029DE71F40073A386 /* View */ = {
@@ -424,6 +437,7 @@
 		1BB30FDF29DA7BED00C35684 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B8FDB3A29ECF6BB007C02ED /* TitleLabel+UILabel */,
 				1B52808029E874CD00EEE6AC /* DefaultButton */,
 				1B2FC3AB29E7833F00ABEC3E /* Network */,
 				1BB30FCE29DA781700C35684 /* Assets.xcassets */,
@@ -541,10 +555,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8FDB3C29ECF6DF007C02ED /* TitleLabel+UILabel.swift in Sources */,
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
 				1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */,
 				1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
+				1B8FDB3E29ECFB61007C02ED /* AddClientViewModel.swift in Sources */,
 				1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */,
 				1B2FC3B229E7837000ABEC3E /* RegisterViewModel.swift in Sources */,
 				1B1830C229DF732D0001849C /* ServiceTableViewCell.swift in Sources */,

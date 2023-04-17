@@ -38,8 +38,7 @@ class SignInViewScreen: BaseView {
     }()
     
     lazy var loginButton: UIButton = {
-        let button = ButtonPattern()
-        button.setTitle("Login", for: .normal)
+        let button = DefaultButton(title: "Login")
         return button
     }()
     
@@ -74,8 +73,6 @@ class SignInViewScreen: BaseView {
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(passwordTextField.snp.bottom).offset(60)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(40)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(40)
         }
     }
 }
