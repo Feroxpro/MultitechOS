@@ -10,10 +10,15 @@ import UIKit
 class AddServiceViewController: UIViewController {
     
     weak var coordinator: MainCoordinator?
+    let screen = AddServiceViewScreeen()
+    
+    override func loadView() {
+        self.view = self.screen
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .black
         // Do any additional setup after loading the view.
     }
     

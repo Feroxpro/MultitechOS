@@ -11,14 +11,14 @@ class AddClientsViewController: UIViewController {
     
     weak var coordinator: MainCoordinator?
     var screen: CustumerBaseViewScreen?
-    var viewModel: RegisterViewModel?
+    var viewModel = RegisterViewModel()
     var addViewModel: AddClientViewModel?
     
     
     override func loadView() {
         screen = CustumerBaseViewScreen()
         view = screen
-        initAddViewModel()
+        setupBinds()
     }
     
     override func viewDidLoad() {
@@ -27,15 +27,19 @@ class AddClientsViewController: UIViewController {
         self.screen?.cepTextField.delegate = self
     }
     
+    func setupBinds() {
+        screen?.saveButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+    }
     
+    @objc func addButtonTapped() {
+        initAddViewModel()
+    }
     
     private func initAddViewModel() {
-        if let screen = self.screen {
             if let coordinator = coordinator {
-                addViewModel = AddClientViewModel(screen: screen, viewController: self, coordinator: coordinator)
+                addViewModel = AddClientViewModel(viewController: self, coordinator: coordinator)
             }
-        }
-        addViewModel?.startAlert()
+        addViewModel?.showAlertConfirmDataOSClient()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,8 +51,8 @@ extension AddClientsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let cepText = screen?.cepTextField.text {
-            if let cepTextField = screen?.cepTextField{
-                viewModel?.validateCepField(textField: cepTextField, cep: cepText) { register in
+            if let cepTextField = screen?.cepTextField {
+                viewModel.validateCepField(textField: cepTextField, cep: cepText) { register in
                     self.initViewModel(data: register)
                 }
             }
@@ -59,7 +63,7 @@ extension AddClientsViewController: UITextFieldDelegate {
         if let screen = self.screen {
             viewModel = RegisterViewModel(custumerBaseViewScreen: screen)
         }
-        viewModel?.addData(register: data)
+        viewModel.addData(register: data)
     }
 }
     

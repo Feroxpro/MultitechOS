@@ -28,8 +28,6 @@ class ClientsViewScreen: BaseView {
     
     var addButton: UIBarButtonItem?
     
-    
-    
     public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
         self.tableView.delegate = delegate
         self.tableView.dataSource = dataSource
@@ -41,7 +39,6 @@ class ClientsViewScreen: BaseView {
     }
     
     override func configureConstraints() {
-        
         
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)

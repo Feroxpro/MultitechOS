@@ -51,7 +51,13 @@ class MainCoordinator: Coordinator {
     func goToAddService() {
         let viewController = AddServiceViewController()
         viewController.coordinator = self
-        self.navigationController.present(viewController, animated: true)
+        if #available(iOS 15.0, *) {
+            if let sheet = viewController.sheetPresentationController {
+                sheet.detents = [.medium(), .medium()]
+                sheet.prefersGrabberVisible = true
+                self.navigationController.present(viewController, animated: true)
+            }
+        }
     }
     
     func goToOrders() {

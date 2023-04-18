@@ -53,6 +53,7 @@
 		1BB30FED29DA852100C35684 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FEC29DA852100C35684 /* SignInViewModel.swift */; };
 		1BB30FF429DA881700C35684 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FF329DA881700C35684 /* HomeViewController.swift */; };
 		1BB30FF929DB5FAC00C35684 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FF829DB5FAC00C35684 /* HomeCollectionViewCell.swift */; };
+		1BDC4B4F29EE338E00327098 /* AddServiceViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC4B4E29EE338E00327098 /* AddServiceViewScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		1BB30FEC29DA852100C35684 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		1BB30FF329DA881700C35684 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1BB30FF829DB5FAC00C35684 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1BDC4B4E29EE338E00327098 /* AddServiceViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +158,9 @@
 		1B1830C329DF741A0001849C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B1830BF29DF73170001849C /* ServicesViewScreen.swift */,
 				1B1830C429DF74230001849C /* Cell */,
+				1BDC4B4E29EE338E00327098 /* AddServiceViewScreen.swift */,
+				1B1830BF29DF73170001849C /* ServicesViewScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
 				1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */,
 				1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */,
+				1BDC4B4F29EE338E00327098 /* AddServiceViewScreen.swift in Sources */,
 				1BB30FEA29DA7D9800C35684 /* BaseViewCell.swift in Sources */,
 				1B8FDB3E29ECFB61007C02ED /* AddClientViewModel.swift in Sources */,
 				1B1830CC29DF7BFE0001849C /* OrdersTableViewCell.swift in Sources */,

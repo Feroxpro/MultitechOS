@@ -25,13 +25,10 @@ class HomeViewScreen: BaseView {
         collectionView.delaysContentTouches = false
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        let screenSize = UIScreen.main.bounds.size
-        let cellWidth = floor(screenSize.width / 2)
-        let cellHeight = floor(screenSize.height / 6)
-        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        collectionView.collectionViewLayout = layout
+        let spacing: CGFloat = 10.0
+        layout.minimumInteritemSpacing = spacing
+        layout.minimumLineSpacing = spacing
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         return collectionView
@@ -44,7 +41,6 @@ class HomeViewScreen: BaseView {
     override func addSubviews() {
         addSubview(logoImage)
         addSubview(collectionView)
-        
     }
     
     override func configureConstraints() {

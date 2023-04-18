@@ -19,6 +19,7 @@ class RestManager {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 guard let userData = try? decoder.decode(Register.self, from: data) else {return}
                 completion(userData)
+                print(userData)
             }
         }
     }

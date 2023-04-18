@@ -21,7 +21,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu CPF", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu CPF",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -30,7 +31,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu nome completo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu nome completo",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -39,7 +41,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu celular", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu celular",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -54,7 +57,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.textColor = .black
         textField.layer.cornerRadius = 6
         textField.isUserInteractionEnabled = true
-        textField.attributedPlaceholder = NSAttributedString(string: " CEP (somente numeros)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " CEP (somente numeros)",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -63,7 +67,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Logradouro", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Logradouro",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -72,7 +77,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Numero", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Numero",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -81,7 +87,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Complemento", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Complemento",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -90,7 +97,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Bairro", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Bairro",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -99,7 +107,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Cidade", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " Cidade",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     
@@ -108,7 +117,8 @@ class CustumerBaseViewScreen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " UF", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: " UF",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         return textField
     }()
     

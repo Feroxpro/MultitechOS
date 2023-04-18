@@ -57,15 +57,17 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
         cell.profileImage.image = UIImage(systemName: item.image)
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 180)
-    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel?.didSelectItem(at: indexPath.row)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let spacing: CGFloat = 10.0
+        let width = (collectionView.bounds.width - spacing * 3) / 2.0
+        let height = width
+        
+        return CGSize(width: width, height: height)
     }
+    
 }
+

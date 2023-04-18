@@ -12,23 +12,13 @@ import UIKit
 class AddClientViewModel {
     
     let viewController: AddClientsViewController?
-    let screen: CustumerBaseViewScreen?
     weak var coordinator: MainCoordinator?
     let clientViewController = ClientsViewController()
     let ordersViewController = OrdersViewController()
     
-    init (screen: CustumerBaseViewScreen, viewController: AddClientsViewController, coordinator: MainCoordinator) {
-        self.screen = screen
+    init (viewController: AddClientsViewController, coordinator: MainCoordinator) {
         self.viewController = viewController
         self.coordinator = coordinator
-    }
-    
-    func startAlert() {
-        screen?.saveButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
-    }
-    
-    @objc func addButtonTapped() {
-        showAlertConfirmDataOSClient()
     }
     
     func showAlertConfirmDataOSClient() {
