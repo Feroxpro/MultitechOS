@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
     }
     
     func addData() {
-        loadItems { items in
+        ItemsMock.shared.loadItems { items in
             self.items = items
         }
     }

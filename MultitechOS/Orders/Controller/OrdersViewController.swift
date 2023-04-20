@@ -9,7 +9,7 @@ import UIKit
 
 class OrdersViewController: UIViewController {
     
-    let screen = OrdersViewScreen()
+    private let screen = OrdersViewScreen()
     weak var coordinator: MainCoordinator?
     var viewModel: OrdersSelectedViewModel?
     

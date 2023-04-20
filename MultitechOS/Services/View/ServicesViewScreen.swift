@@ -28,8 +28,6 @@ class ServicesViewScreen: BaseView {
         
         var addButton: UIBarButtonItem?
         
-        
-        
         public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
             self.tableView.delegate = delegate
             self.tableView.dataSource = dataSource
@@ -37,7 +35,6 @@ class ServicesViewScreen: BaseView {
         
         override func addSubviews() {
             addSubview(tableView)
-            
         }
         
         override func configureConstraints() {

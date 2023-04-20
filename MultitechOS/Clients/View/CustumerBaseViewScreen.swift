@@ -11,6 +11,12 @@ import SnapKit
 
 class CustumerBaseViewScreen: BaseView {
     
+    var register: Register?  {
+        didSet {
+            nameStreetTextField.text = register?.logradouro
+        }
+    }
+    
     lazy var titleDataLabel: UILabel = {
         let label = Titlelabel(text: "Dados Pessoais")
         return label

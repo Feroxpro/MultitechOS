@@ -14,14 +14,20 @@ struct Item {
     
 }
 
-func loadItems(completion: @escaping ([Item]) -> Void) {
-    let items = [
-        Item(name: "Clientes",  image: "person.badge.plus"),
-        Item(name: "Serviços",  image: "newspaper"),
-        Item(name: "Ordens",    image: "folder"),
-        Item(name: "Garantias", image: "lock.doc"),
-        Item(name: "Finalizados", image: "text.viewfinder"),
-        Item(name: "Configurações", image: "gear")
-    ]
-    completion(items)
+class ItemsMock {
+    static let shared = ItemsMock()
+    
+    func loadItems(completion: @escaping ([Item]) -> Void) {
+        let items = [
+            Item(name: "Clientes",  image: "person.badge.plus"),
+            Item(name: "Serviços",  image: "newspaper"),
+            Item(name: "Ordens",    image: "folder"),
+            Item(name: "Garantias", image: "lock.doc"),
+            Item(name: "Finalizados", image: "text.viewfinder"),
+            Item(name: "Configurações", image: "gear")
+        ]
+        completion(items)
+    }
 }
+
+

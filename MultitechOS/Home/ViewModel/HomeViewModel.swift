@@ -10,14 +10,13 @@ import Foundation
 class HomeViewModel {
     
     var homeViewController: HomeViewController
-    
+
     weak var coodinator: MainCoordinator?
     
     init(homeViewController: HomeViewController, coordinator: MainCoordinator) {
         self.homeViewController = homeViewController
         self.coodinator = coordinator
     }
-
 
     private var selectedIndex: Int?
     

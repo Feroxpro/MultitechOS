@@ -20,8 +20,7 @@ class AddServiceViewScreeen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Serviço",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = setAttributtedString(title: " Serviço")
         return textField
     }()
     
@@ -30,8 +29,7 @@ class AddServiceViewScreeen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Preço",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = setAttributtedString(title: " Preço")
         return textField
     }()
     
@@ -40,8 +38,7 @@ class AddServiceViewScreeen: BaseView {
         textField.backgroundColor = .white
         textField.textColor = .black
         textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Preço de custo",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = setAttributtedString(title: " Preço de custo")
         return textField
     }()
     
@@ -51,8 +48,7 @@ class AddServiceViewScreeen: BaseView {
         textField.textColor = .black
         textField.layer.cornerRadius = 6
         textField.isUserInteractionEnabled = true
-        textField.attributedPlaceholder = NSAttributedString(string: " Descrição",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        textField.attributedPlaceholder = setAttributtedString(title: " Descrição")
         return textField
     }()
     
@@ -108,5 +104,12 @@ class AddServiceViewScreeen: BaseView {
             make.top.equalTo(descriptionField.snp.bottom).offset(60)
         }
         
+    }
+}
+
+extension AddServiceViewScreeen {
+    func setAttributtedString(title: String) -> NSAttributedString {
+        return NSAttributedString(string: title,
+                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
     }
 }

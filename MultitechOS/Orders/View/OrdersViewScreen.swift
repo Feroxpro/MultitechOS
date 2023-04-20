@@ -9,7 +9,10 @@ import UIKit
 
 class OrdersViewScreen: BaseView {
     
+    // MARK: - Properties
+    
     let identifier: String = "OrdersTableViewCell"
+    var addButton: UIBarButtonItem?
     
     lazy var searchOrders: UISearchController = {
         let search = UISearchController()
@@ -26,9 +29,7 @@ class OrdersViewScreen: BaseView {
         return tableView
     }()
     
-    var addButton: UIBarButtonItem?
-    
-    
+    // MARK: - Functions
     
     public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
         self.tableView.delegate = delegate
@@ -37,11 +38,9 @@ class OrdersViewScreen: BaseView {
     
     override func addSubviews() {
         addSubview(tableView)
-        
     }
     
     override func configureConstraints() {
-        
         
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)

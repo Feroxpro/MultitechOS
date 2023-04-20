@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Register: Codable {
+struct Register: Codable {
     var logradouro: String
     var complemento: String
     var bairro: String

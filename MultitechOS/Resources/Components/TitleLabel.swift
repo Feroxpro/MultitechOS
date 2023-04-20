@@ -5,10 +5,7 @@
 //  Created by Felipe Domingos on 17/04/23.
 //
 
-import Foundation
-
 import UIKit
-import SnapKit
 
 class Titlelabel: UILabel {
    

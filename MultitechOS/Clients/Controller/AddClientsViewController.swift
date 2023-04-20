@@ -11,7 +11,7 @@ class AddClientsViewController: UIViewController {
     
     weak var coordinator: MainCoordinator?
     var screen: CustumerBaseViewScreen?
-    var viewModel = RegisterViewModel()
+    var viewModel: RegisterViewModel?
     var addViewModel: AddClientViewModel?
     
     
@@ -52,7 +52,7 @@ extension AddClientsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let cepText = screen?.cepTextField.text {
             if let cepTextField = screen?.cepTextField {
-                viewModel.validateCepField(textField: cepTextField, cep: cepText) { register in
+                viewModel?.validateCepField(textField: cepTextField, cep: cepText) { register in
                     self.initViewModel(data: register)
                 }
             }
@@ -60,10 +60,12 @@ extension AddClientsViewController: UITextFieldDelegate {
     }
     
     func initViewModel(data: Register) {
-        if let screen = self.screen {
-            viewModel = RegisterViewModel(custumerBaseViewScreen: screen)
-        }
-        viewModel.addData(register: data)
+//        if let screen = self.screen {
+//            viewModel = RegisterViewModel(custumerBaseViewScreen: screen)
+//        }
+        
+        screen?.register = data
+        
     }
 }
     

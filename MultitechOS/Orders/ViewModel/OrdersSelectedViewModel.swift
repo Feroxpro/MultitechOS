@@ -11,13 +11,19 @@ import UIKit
 
 class OrdersSelectedViewModel {
     
+    // MARK: - Properties
+    
     let viewController: OrdersViewController?
     weak var coordinator: MainCoordinator?
+    
+    // MARK: - Initializers
     
     init(viewController: OrdersViewController, coordinator: MainCoordinator) {
         self.viewController = viewController
         self.coordinator = coordinator
     }
+    
+    // MARK: - Navigations
     
     func showDeviceAlert() {
         let alertController = UIAlertController(title: "Selecione um dispositivo para iniciar a OS!", message: nil, preferredStyle: .actionSheet)

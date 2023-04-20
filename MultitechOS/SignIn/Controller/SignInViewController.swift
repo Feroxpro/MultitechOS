@@ -44,3 +44,5 @@ class SignInViewController: UIViewController {
         }
     }
 }
+
+// Fazer TouchesBegan com extension
