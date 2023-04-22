@@ -14,6 +14,9 @@ class CustumerBaseViewScreen: BaseView {
     var register: Register?  {
         didSet {
             nameStreetTextField.text = register?.logradouro
+            districtTextField.text = register?.bairro
+            cityTextField.text = register?.localidade
+            StateTextField.text = register?.uf
         }
     }
     
@@ -22,33 +25,18 @@ class CustumerBaseViewScreen: BaseView {
         return label
     }()
     
-    lazy var CpfTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu CPF",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var CpfTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Insira seu CPF")
         return textField
     }()
     
-    lazy var nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu nome completo",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var nameTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Insira seu nome completo")
         return textField
     }()
     
-    lazy var phoneTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Insira seu celular",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var phoneTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Insira seu celular")
         return textField
     }()
     
@@ -57,74 +45,38 @@ class CustumerBaseViewScreen: BaseView {
         return label
     }()
     
-    lazy var cepTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.isUserInteractionEnabled = true
-        textField.attributedPlaceholder = NSAttributedString(string: " CEP (somente numeros)",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var cepTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " CEP (somente numeros)")
         return textField
     }()
     
-    lazy var nameStreetTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Logradouro",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var nameStreetTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Logradouro")
         return textField
     }()
     
-    lazy var numberStreetTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Numero",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var numberStreetTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Numero")
         return textField
     }()
     
-    lazy var complementTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Complemento",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var complementTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Complemento")
         return textField
     }()
     
-    lazy var districtTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Bairro",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var districtTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Bairro")
         return textField
     }()
     
-    lazy var cityTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " Cidade",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var cityTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " Cidade")
         return textField
     }()
     
-    lazy var StateTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.textColor = .black
-        textField.layer.cornerRadius = 6
-        textField.attributedPlaceholder = NSAttributedString(string: " UF",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    lazy var StateTextField: DefaultTextField = {
+        let textField = DefaultTextField(placeholder: " UF")
         return textField
     }()
     
@@ -157,24 +109,18 @@ class CustumerBaseViewScreen: BaseView {
         
         CpfTextField.snp.makeConstraints { make in
             make.top.equalTo(titleDataLabel.snp.top).offset(60)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
-            make.height.equalTo(40)
-            make.width.equalTo(360)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
         }
         nameTextField.snp.makeConstraints { make in
             make.top.equalTo(CpfTextField.snp.bottom).offset(20)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
-            make.height.equalTo(40)
-            make.width.equalTo(360)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
         }
         phoneTextField.snp.makeConstraints { make in
             make.top.equalTo(nameTextField.snp.bottom).offset(20)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
-            make.height.equalTo(40)
-            make.width.equalTo(360)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
         }
         titleAddresLabel.snp.makeConstraints { make in
             make.top.equalTo(phoneTextField.snp.bottom).offset(30)
@@ -184,44 +130,38 @@ class CustumerBaseViewScreen: BaseView {
         cepTextField.snp.makeConstraints { make in
             make.top.equalTo(titleAddresLabel.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
-            make.height.equalTo(40)
-            make.width.equalTo(100)
+            make.width.equalToSuperview().dividedBy(3)
         }
         nameStreetTextField.snp.makeConstraints { make in
             make.top.equalTo(cepTextField.snp.bottom).offset(20)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
-            make.height.equalTo(40)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
         }
         numberStreetTextField.snp.makeConstraints { make in
             make.top.equalTo(nameStreetTextField.snp.bottom).offset(20)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(260)
-            make.height.equalTo(40)
         }
         complementTextField.snp.makeConstraints { make in
             make.top.equalTo(nameStreetTextField.snp.bottom).offset(20)
             make.leading.equalTo(numberStreetTextField.snp.trailing).offset(10)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
-            make.height.equalTo(40)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
         }
         districtTextField.snp.makeConstraints { make in
             make.top.equalTo(numberStreetTextField.snp.bottom).offset(20)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
-            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
-            make.height.equalTo(40)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
         }
         cityTextField.snp.makeConstraints { make in
             make.top.equalTo(districtTextField.snp.bottom).offset(20)
-            make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(10)
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(70)
-            make.height.equalTo(40)
         }
         StateTextField.snp.makeConstraints { make in
             make.top.equalTo(districtTextField.snp.bottom).offset(20)
             make.leading.equalTo(cityTextField.snp.trailing).offset(10)
-            make.height.equalTo(40)
-            make.width.equalTo(60)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(10)
+
         }
         saveButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

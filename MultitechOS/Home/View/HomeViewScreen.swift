@@ -47,14 +47,13 @@ class HomeViewScreen: BaseView {
         
         logoImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(100)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
             make.width.equalTo(300)
             make.height.equalTo(130)
         }
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(logoImage.snp.bottom).offset(30)
-            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).inset(18)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(18)
+            make.horizontalEdges.equalToSuperview().offset(18).inset(18)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(18)
         }
     }

@@ -17,7 +17,6 @@ class DefaultButton: UIButton {
         backgroundColor = .red
         layer.cornerRadius = 8
         
-        // Define as constraints usando o SnapKit
         snp.makeConstraints { make in
             make.width.equalTo(300)
             make.height.equalTo(40)

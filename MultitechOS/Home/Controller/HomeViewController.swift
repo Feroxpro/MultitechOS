@@ -65,7 +65,6 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
         let spacing: CGFloat = 10.0
         let width = (collectionView.bounds.width - spacing * 3) / 2.0
         let height = width
-        
         return CGSize(width: width, height: height)
     }
     

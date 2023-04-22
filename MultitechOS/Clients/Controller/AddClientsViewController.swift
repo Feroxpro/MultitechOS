@@ -25,6 +25,7 @@ class AddClientsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         self.screen?.cepTextField.delegate = self
+        initViewModel()
     }
     
     func setupBinds() {
@@ -53,19 +54,16 @@ extension AddClientsViewController: UITextFieldDelegate {
         if let cepText = screen?.cepTextField.text {
             if let cepTextField = screen?.cepTextField {
                 viewModel?.validateCepField(textField: cepTextField, cep: cepText) { register in
-                    self.initViewModel(data: register)
+                    self.screen?.register = register
                 }
             }
         }
     }
     
-    func initViewModel(data: Register) {
-//        if let screen = self.screen {
-//            viewModel = RegisterViewModel(custumerBaseViewScreen: screen)
-//        }
-        
-        screen?.register = data
-        
+    func initViewModel() {
+        if let screen = self.screen {
+            viewModel = RegisterViewModel(custumerBaseViewScreen: screen)
+        }
     }
 }
     
