@@ -10,24 +10,23 @@ import SnapKit
 
 class CustomButton: UIButton {
     
-    convenience init(menuOptions: [String]) {
+    convenience init(menuOptions: [String], primaryTitle: String) {
         self.init(type: .system)
         setTitleColor(.white, for: .normal)
-        backgroundColor = .red
+        backgroundColor = .white
         layer.cornerRadius = 8
         let font = UIFont.boldSystemFont(ofSize: 16)
 
         let attributes: [NSAttributedString.Key: Any] = [
             .font: font,
-            .foregroundColor: UIColor.white
+            .foregroundColor: UIColor.black
         ]
 
-        let attributedTitle = NSAttributedString(string: "Status Inicial", attributes: attributes)
+        let attributedTitle = NSAttributedString(string: primaryTitle, attributes: attributes)
         setAttributedTitle(attributedTitle, for: .normal)
         
         
         snp.makeConstraints { make in
-            make.width.equalTo(300)
             make.height.equalTo(40)
         }
         
@@ -38,7 +37,7 @@ class CustomButton: UIButton {
 
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: font,
-                    .foregroundColor: UIColor.white
+                    .foregroundColor: UIColor.black
                 ]
 
                 let attributedTitle = NSAttributedString(string: option, attributes: attributes)

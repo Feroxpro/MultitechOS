@@ -43,6 +43,8 @@
 		1B96C98629DD19BD001E84B5 /* collectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96C98529DD19BD001E84B5 /* collectionModel.swift */; };
 		1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */; };
 		1BA1B99C29E9F547004E35A6 /* AddOrderMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B99B29E9F547004E35A6 /* AddOrderMobileViewController.swift */; };
+		1BA5B6F229F44A3E002B481B /* DefaultCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5B6F129F44A3E002B481B /* DefaultCalendar.swift */; };
+		1BA5B6F429F5B30E002B481B /* ImageSmartphoneWithCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5B6F329F5B30E002B481B /* ImageSmartphoneWithCamera.swift */; };
 		1BB30FC329DA781400C35684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC229DA781400C35684 /* AppDelegate.swift */; };
 		1BB30FC529DA781400C35684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC429DA781400C35684 /* SceneDelegate.swift */; };
 		1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB30FC629DA781400C35684 /* SignInViewController.swift */; };
@@ -95,6 +97,8 @@
 		1B96C98529DD19BD001E84B5 /* collectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionModel.swift; sourceTree = "<group>"; };
 		1BA1B99929E8F94F004E35A6 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		1BA1B99B29E9F547004E35A6 /* AddOrderMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderMobileViewController.swift; sourceTree = "<group>"; };
+		1BA5B6F129F44A3E002B481B /* DefaultCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCalendar.swift; sourceTree = "<group>"; };
+		1BA5B6F329F5B30E002B481B /* ImageSmartphoneWithCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSmartphoneWithCamera.swift; sourceTree = "<group>"; };
 		1BB30FBF29DA781400C35684 /* MultitechOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultitechOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB30FC229DA781400C35684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB30FC429DA781400C35684 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 				1B8FDB3B29ECF6DF007C02ED /* TitleLabel.swift */,
 				1B7DCE6229F30A1500FFC8DA /* DefaultTextField.swift */,
 				1B7DCE6829F384EE00FFC8DA /* CustomMenu.swift */,
+				1BA5B6F129F44A3E002B481B /* DefaultCalendar.swift */,
+				1BA5B6F329F5B30E002B481B /* ImageSmartphoneWithCamera.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 			files = (
 				1B8FDB3C29ECF6DF007C02ED /* TitleLabel.swift in Sources */,
 				1BB30FC729DA781400C35684 /* SignInViewController.swift in Sources */,
+				1BA5B6F229F44A3E002B481B /* DefaultCalendar.swift in Sources */,
 				1BA1B99A29E8F94F004E35A6 /* AddServiceViewController.swift in Sources */,
 				1B7DCE6529F346AD00FFC8DA /* AddOrdersScreen.swift in Sources */,
 				1B8A4FAB29E12AF000B8785E /* MainCoordinator.swift in Sources */,
@@ -613,6 +620,7 @@
 				1B2FC3A729E65F8000ABEC3E /* Coordinator.swift in Sources */,
 				1B1830BA29DF33B50001849C /* ClientsViewScreen.swift in Sources */,
 				1B8FDB4429ED077F007C02ED /* AddOrdemNotebookViewController.swift in Sources */,
+				1BA5B6F429F5B30E002B481B /* ImageSmartphoneWithCamera.swift in Sources */,
 				1B8FDB4029ED071C007C02ED /* AddOrderGameViewController.swift in Sources */,
 				1B7DCE6929F384EE00FFC8DA /* CustomMenu.swift in Sources */,
 				1B91F3F929DE7B170073A386 /* OrdersViewController.swift in Sources */,
